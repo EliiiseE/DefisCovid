@@ -17,6 +17,14 @@
 
   <body>
     <div class="preferences">
+      <div class="text_preferences">
+        <div class="title_preferences">
+          <p>Choisis tes préférences ici ! </p>
+        </div>
+        <div class="explication_preferences">
+          <p>Ainsi tous les défis te seront proposés en fonction de ce que tu aimes faire ! </p>
+        </div>
+      </div>
       <div class="buttons">
         <button id="button-all-challenge" class="button-preferences" data-list="all">Tous les défis 🎲 </button>
         <button class="button-preferences" data-list="tv">Défis TV 🖥</button>
@@ -50,16 +58,39 @@
     </div>
 
     <div class="planning">
-      <div class="challenge-container">
-        <p class="challenge">Aujourd’hui tu dois faire un <span>gâteau géant</span></p>
+      <div class="text_planning">
+        <div class="title_planning">
+          <p>Hey te revoilà ! 😇</p>
+        </div>
+        <div class="explication_planning">
+          <p> <span>Aujourd’hui c’est ton premier jour donc premier DÉFI !</span> Tiens-toi prêt ! 
+            N’oublie pas de <span> partager </span>sur les réseaux ton résultat avec le <span>#DEFISCOVID  </span> 😉</p>
+        </div>
+        <div>
+          <!-- METTRE ICONE INSTA ET TWITTER-->
+        </div>
+      </div>
+      <div class="challenge">
+        <div class="challenge-container">
+          <div>
+           <img src="assets/images/cake.svg" alt="YummyCake">
+          </div>
+          <div class="title_challenge">
+            <p>Aujourd’hui tu dois faire un <span>gâteau géant</span></p>
+          </div>
+        </div>
       </div>
       <div class="citation-and-agenda">
         <p class="citation">“La vie est un long fleuve tranquille”</p>
         <div class="agenda-container">
-          <img class="arrow" data-direction="left" src="assets/images/arrow-left.svg" alt="Flèche de navigation de gauche">
-          <ul id="agenda" class="agenda"></ul>
-          <input type="range" min="1" max="14" value="1" class="slider" id="myRange">
-          <img class="arrow" data-direction="right" src="assets/images/arrow-right.svg" alt="Flèche de navigation de droite">
+          <div class="agenda_arrow">
+              <img class="arrow" data-direction="left" src="assets/images/arrow-left.svg" alt="Flèche de navigation de gauche">
+              <ul id="agenda" class="agenda"></ul> 
+              <img class="arrow" data-direction="right" src="assets/images/arrow-right.svg" alt="Flèche de navigation de droite">
+          </div>
+          <div class="agenda_slider">
+              <input type="range" min="1" max="14" value="1" class="slider" id="myRange">
+          </div>
         </div>
       </div>
     </div>

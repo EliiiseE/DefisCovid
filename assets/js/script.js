@@ -114,10 +114,10 @@ $(document).ready(function() {
 
 // Permet de cliquer sur les flèches du planning
 $('.arrow').click(function() {
-  const agenda = $('.agenda')
+  const agenda = $('.agenda li')
   const offset = agenda.offset()
   if($(this).data('direction') == 'left') {
-    agenda.css('transform', `translateX(${offset.left + 100}px)`)
+    agenda.css('transform', `translateX(${offset.left + 20}px)`)
   } else if($(this).data('direction') == 'right') {
     agenda.css('transform', `translateX(${offset.left - 100}px)`)
   }
