@@ -337,10 +337,53 @@ flex-direction: column;
   align-items: center;
 }
 
+.arrow{
+  width: 8px;
+  height: 16px;
+}
+
 .agenda_slider{
   display: flex;
   justify-content: center;
   align-items: center;
+  color: var(--dark-orange);
+}
+.slidecontainer {
+  width: 100%;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 264px;
+  height: 4px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--dark-orange);
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background:var(--dark-orange);
+  cursor: pointer;
 }
 
 .citation{
@@ -384,3 +427,68 @@ flex-direction: column;
   margin-left: 0;
 }
 
+/*.input POUR FORMULAIRE*/
+* { box-sizing:border-box; }
+
+.group 			  { 
+  position:relative; 
+  margin:45px; 
+}
+
+.input 				{
+  font-size:18px;
+  padding:20px 20px 20px 20px;
+  display:block;
+  width: 309px;
+  height: 48px;
+  border:1px solid #999;
+  border-radius: 8px;
+  background-color: var(--beige);
+}
+
+.input:focus 		{ outline:none; }
+
+
+label 				 {
+  color:#999; 
+  background: none;
+  font-size:18px;
+  font-weight:normal;
+  position:absolute;
+  pointer-events:none;
+  left:15px;
+  top:12px;
+  padding: 0 4px ;
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+}
+
+/* active state */
+.input:focus ~ label, .input:valid ~ label 		{
+  top:-10px;
+  font-size: 14px;
+  color:var(--dark-orange);
+  background:var(--beige);
+}
+
+.input:focus, .input:valid{
+  top:-10px;
+  color: var(--black);
+  border:1px solid var(--dark-orange);
+}
+
+.input::placeholder {
+      color: #999;
+      opacity: 0;
+  transition: 0.2s ease;
+      }
+
+.input:focus::placeholder, .input:valid::placeholder{
+  opacity: 1;
+}
+
+.textarea {
+  height: 200px;
+  resize: vertical;
+}
