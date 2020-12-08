@@ -57,7 +57,7 @@
       font-family: $font-montserrat;
       font-weight: $weight-semi-bold;
     }
-    .active {
+    &.active {
       background-color: $light-orange;
       font-family: $font-montserrat;
       font-weight: $weight-semi-bold;

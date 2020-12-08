@@ -147,9 +147,11 @@ button { outline: none; }
 
 .title_planning { font-size: 24px; font-family: "Montserrat", sans-serif; font-weight: 400; }
 
+.explication_planning { font-size: 20px; font-family: "Montserrat", sans-serif; font-weight: 400; text-align: center; }
+
 .explication_planning span { font-size: 20px; font-family: "Montserrat", sans-serif; font-weight: 600; }
 
-.explication_planning { font-size: 20px; font-family: "Montserrat", sans-serif; font-weight: 400; text-align: center; }
+.error-planning { font-size: 20px; font-family: "Montserrat", sans-serif; font-weight: 400; text-align: center; }
 
 .challenge { display: flex; justify-content: center; align-items: center; }
 
@@ -187,7 +189,7 @@ button { outline: none; }
 
 .agenda li { display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100%; margin-left: 15px; font-size: 42px; }
 
-.agenda li:first-child { margin-left: 0; }
+.agenda li li:first-child { margin-left: 0; }
 
 /*.input POUR FORMULAIRE*/
 .group { position: relative; margin: 45px; }
