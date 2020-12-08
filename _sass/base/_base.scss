@@ -1,0 +1,35 @@
+/* Style général */
+:root {
+    --yellow: #fcd34d;
+    --dark-orange: #ff604e;
+    --black: #191847;
+    --light-orange: #ffcdc1;
+    --black-button: #292929;
+    --white: #ffffff;
+    --grey: #d6d6d6;
+    --beige: #fffcf2;
+    --font-montserrat: "Montserrat", sans-serif;
+    --font-roboto: "Roboto", sans-serif;
+    --weight-light: 300;
+    --weight-regular: 400;
+    --weight-medium: 500;
+    --weight-semi-bold: 600;
+    --weight-bold: 700;
+    --weight-extra-bold: 800;
+    --weight-black: 900;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--beige);
+}
+
+* {
+    box-sizing: border-box;
+}
