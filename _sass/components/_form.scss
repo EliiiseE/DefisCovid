@@ -1,0 +1,64 @@
+/*.input POUR FORMULAIRE*/
+  
+.group 			  { 
+    position:relative; 
+    margin:45px; 
+  }
+  
+  .input 				{
+    font-size:18px;
+    padding:20px 20px 20px 20px;
+    display:block;
+    width: 309px;
+    height: 48px;
+    border:1px solid #999;
+    border-radius: 8px;
+    background-color: $beige;
+  }
+  
+  .input:focus 		{ outline:none; }
+  
+  
+  label 				 {
+    color:#999; 
+    background: none;
+    font-size:18px;
+    font-weight:normal;
+    position:absolute;
+    pointer-events:none;
+    left:15px;
+    top:12px;
+    padding: 0 4px ;
+    transition:0.2s ease all; 
+    -moz-transition:0.2s ease all; 
+    -webkit-transition:0.2s ease all;
+  }
+  
+  /* active state */
+  .input:focus ~ label, .input:valid ~ label 		{
+    top:-10px;
+    font-size: 14px;
+    color:$dark-orange;
+    background:$beige;
+  }
+  
+  .input:focus, .input:valid{
+    top:-10px;
+    color: $black;
+    border:1px solid $dark-orange;
+  }
+  
+  .input::placeholder {
+        color: #999;
+        opacity: 0;
+    transition: 0.2s ease;
+        }
+  
+  .input:focus::placeholder, .input:valid::placeholder{
+    opacity: 1;
+  }
+  
+  .textarea {
+    height: 200px;
+    resize: vertical;
+  }
