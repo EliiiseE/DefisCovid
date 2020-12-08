@@ -23,7 +23,7 @@
     margin: 0 auto;
     width: 15%;
     height: 15%;
-    background-color: var(--dark-orange);
+    background-color: $dark-orange;
     border-radius: 100%;
     -webkit-animation: sk-circleBounceDelay 1.2s infinite ease-in-out both;
             animation: sk-circleBounceDelay 1.2s infinite ease-in-out both;
@@ -138,20 +138,20 @@
   
   .title_planning{
     font-size: 24px;
-    font-family: var(--font-montserrat);
-    font-weight: var(--weight-regular);
+    font-family: $font-montserrat;
+    font-weight: $weight-regular;
   }
   
   .explication_planning span{
     font-size: 20px;
-    font-family: var(--font-montserrat);
-    font-weight: var(--weight-semi-bold);
+    font-family: $font-montserrat;
+    font-weight: $weight-semi-bold;
   }
   
   .explication_planning{
     font-size: 20px;
-    font-family: var(--font-montserrat);
-    font-weight: var(--weight-regular);
+    font-family: $font-montserrat;
+    font-weight: $weight-regular;
     text-align: center;
   }
   
@@ -162,7 +162,7 @@
   }
   
   .challenge-container{
-  border: 2px solid var(--yellow);
+  border: 2px solid $yellow;
   border-radius: 50%;
   height: 309px;
   width: 309px;
@@ -176,8 +176,8 @@
   
   .title_challenge{
     font-size: 32px;
-    font-family: var(--font-roboto);
-    font-weight: var(--weight-light);
+    font-family: $font-roboto;
+    font-weight: $weight-light;
     text-align: center;
   }
   
@@ -189,8 +189,8 @@
   .title_challenge span{
     font-size: 32px;
     text-transform: uppercase;
-    font-family: var(--font-roboto);
-    font-weight: var(--weight-regular);
+    font-family: $font-roboto;
+    font-weight: $weight-regular;
   }
   
   .citation-and-agenda{
@@ -213,7 +213,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: var(--dark-orange);
+    color: $dark-orange;
   }
   .slidecontainer {
     width: 100%;
@@ -241,7 +241,7 @@
     width: 12px;
     height: 12px;
     border-radius: 50%;
-    background: var(--dark-orange);
+    background: $dark-orange;
     cursor: pointer;
   }
   
@@ -249,14 +249,14 @@
     width: 25px;
     height: 25px;
     border-radius: 50%;
-    background:var(--dark-orange);
+    background:$dark-orange;
     cursor: pointer;
   }
   
   .citation{
     font-size: 24px;
-    font-family: var(--font-montserrat);
-    font-weight: var(--weight-regular);
+    font-family: $font-montserrat;
+    font-weight: $weight-regular;
     text-align: center;
   }
   
@@ -270,14 +270,14 @@
     overflow-x: hidden;
     transition: 0.4s ease;
     font-size: 28px;
-    font-family: var(--font-roboto);
-    font-weight: var(--weight-regular);
+    font-family: $font-roboto;
+    font-weight: $weight-regular;
   }
   
   .agenda span{
     font-size: 18px;
-    font-family: var(--font-roboto);
-    font-weight: var(--weight-light);
+    font-family: $font-roboto;
+    font-weight: $weight-light;
   }
   
   .agenda li {
@@ -309,7 +309,7 @@
     height: 48px;
     border:1px solid #999;
     border-radius: 8px;
-    background-color: var(--beige);
+    background-color: $beige;
   }
   
   .input:focus 		{ outline:none; }
@@ -334,14 +334,14 @@
   .input:focus ~ label, .input:valid ~ label 		{
     top:-10px;
     font-size: 14px;
-    color:var(--dark-orange);
-    background:var(--beige);
+    color:$dark-orange;
+    background:$beige;
   }
   
   .input:focus, .input:valid{
     top:-10px;
-    color: var(--black);
-    border:1px solid var(--dark-orange);
+    color: $black;
+    border:1px solid $dark-orange;
   }
   
   .input::placeholder {
