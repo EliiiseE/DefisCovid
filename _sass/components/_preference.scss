@@ -1,0 +1,100 @@
+.text_preferences{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 35px;
+  }
+  
+  .title_preferences {
+    font-size: 24px;
+    font-family: var(--font-roboto);
+    font-weight: var(--weight-bold);
+  
+  }
+  
+  .explication_preferences{
+    font-size: 20px;
+    font-family: var(--font-montserrat);
+    font-weight: var(--weight-regular);
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  button {
+    outline: none;
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .button-preferences {
+    background-color: var(--beige);
+    color: var(--black);
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 24px;
+    font-family: var(--font-montserrat);
+    font-weight: var(--weight-medium);
+    text-transform: uppercase;
+    margin-top: 35px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border: 4px solid var(--dark-orange);
+    border-radius: 61px;
+    height: 72px;
+    width: 259px;
+    box-shadow: 2px 5px 2px #bebebe;
+  }
+  
+  .button-preferences:first-child {
+    margin-top: 0;
+  }
+  
+  .button-preferences:hover {
+    background-color: var(--light-orange);
+    font-family: var(--font-montserrat);
+    font-weight: var(--weight-semi-bold);
+  }
+  
+  .button-preferences.active {
+    background-color: var(--light-orange);
+    font-family: var(--font-montserrat);
+    font-weight: var(--weight-semi-bold);
+  }
+  
+  .button-continue-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .button-continue {
+    background-color: var(--dark-orange);
+    color: var(--black-button);
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    font-family: var(--font-montserrat);
+    font-weight: var(--weight-medium);
+    margin-top: 86px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border: 6px solid var(--dark-orange);
+    border-radius: 61px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.6);
+    transition: 0.4s ease;
+    height: 38px;
+    width: 260px;
+  }
+  
+  .button-continue:hover {
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.6);
+    font-family: var(--font-montserrat);
+    font-weight: var(--weight-semi-bold);
+  }
