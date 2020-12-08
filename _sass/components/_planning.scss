@@ -142,17 +142,17 @@
     font-weight: $weight-regular;
   }
   
-  .explication_planning span{
-    font-size: 20px;
-    font-family: $font-montserrat;
-    font-weight: $weight-semi-bold;
-  }
-  
   .explication_planning{
     font-size: 20px;
     font-family: $font-montserrat;
     font-weight: $weight-regular;
     text-align: center;
+    span{
+      font-size: 20px;
+      font-family: $font-montserrat;
+      font-weight: $weight-semi-bold;
+    }
+    
   }
   
   .challenge {
@@ -179,20 +179,18 @@
     font-family: $font-roboto;
     font-weight: $weight-light;
     text-align: center;
+    p {
+      margin: 0;
+      margin-top: 10px;
+    }
+      span{
+      font-size: 32px;
+      text-transform: uppercase;
+      font-family: $font-roboto;
+      font-weight: $weight-regular;
+    }
   }
-  
-  .title_challenge p {
-    margin: 0;
-    margin-top: 10px;
-  }
-  
-  .title_challenge span{
-    font-size: 32px;
-    text-transform: uppercase;
-    font-family: $font-roboto;
-    font-weight: $weight-regular;
-  }
-  
+
   .citation-and-agenda{
   display: flex;
   flex-direction: column;
@@ -229,30 +227,27 @@
     opacity: 0.7;
     -webkit-transition: .2s;
     transition: opacity .2s;
+    &:hover {
+      opacity: 1;
+    }
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: $dark-orange;
+      cursor: pointer;
+    }
+    &::-moz-range-thumb {
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      background:$dark-orange;
+      cursor: pointer;
+    }
   }
-  
-  .slider:hover {
-    opacity: 1;
-  }
-  
-  .slider::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background: $dark-orange;
-    cursor: pointer;
-  }
-  
-  .slider::-moz-range-thumb {
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    background:$dark-orange;
-    cursor: pointer;
-  }
-  
+
   .citation{
     font-size: 24px;
     font-family: $font-montserrat;
@@ -272,26 +267,23 @@
     font-size: 28px;
     font-family: $font-roboto;
     font-weight: $weight-regular;
-  }
-  
-  .agenda span{
-    font-size: 18px;
-    font-family: $font-roboto;
-    font-weight: $weight-light;
-  }
-  
-  .agenda li {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    margin-left: 15px;
-    font-size: 42px;
-  }
-  
-  .agenda li:first-child {
-    margin-left: 0;
-  }
-  
+      span{
+      font-size: 18px;
+      font-family: $font-roboto;
+      font-weight: $weight-light;
+    }
+      li {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        margin-left: 15px;
+        font-size: 42px;
+      li:first-child {
+        margin-left: 0;
+        }
+        
+      }
+}
   

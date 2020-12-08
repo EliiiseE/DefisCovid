@@ -118,14 +118,15 @@
     transition: background-color 0.4s ease;
     transition: font-family 0.4s ease;
     transition: font-weight 0.4s ease;
+
+    &:hover{
+        box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.6);
+        background-color: $dark-orange;
+        font-family: $font-montserrat;
+        font-weight: $weight-semi-bold;
+    }
 }
 
-.button-canceled:hover {
-    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.6);
-    background-color: $dark-orange;
-    font-family: $font-montserrat;
-    font-weight: $weight-semi-bold;
-}
 
 @media screen and (max-width: 1060px) {
     .popup_cookie {

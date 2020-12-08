@@ -49,22 +49,19 @@
     height: 72px;
     width: 259px;
     box-shadow: 2px 5px 2px #bebebe;
-  }
-  
-  .button-preferences:first-child {
-    margin-top: 0;
-  }
-  
-  .button-preferences:hover {
-    background-color: $light-orange;
-    font-family: $font-montserrat;
-    font-weight: $weight-semi-bold;
-  }
-  
-  .button-preferences.active {
-    background-color: $light-orange;
-    font-family: $font-montserrat;
-    font-weight: $weight-semi-bold;
+    &:first-child {
+      margin-top: 0;
+    }
+    &:hover {
+      background-color: $light-orange;
+      font-family: $font-montserrat;
+      font-weight: $weight-semi-bold;
+    }
+    .active {
+      background-color: $light-orange;
+      font-family: $font-montserrat;
+      font-weight: $weight-semi-bold;
+    }
   }
   
   .button-continue-container {
@@ -91,10 +88,10 @@
     transition: 0.4s ease;
     height: 38px;
     width: 260px;
+    &:hover {
+      box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.6);
+      font-family: $font-montserrat;
+      font-weight: $weight-semi-bold;
+    }
   }
   
-  .button-continue:hover {
-    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.6);
-    font-family: $font-montserrat;
-    font-weight: $weight-semi-bold;
-  }
