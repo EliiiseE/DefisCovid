@@ -6,10 +6,12 @@
   }
   
 .input 				{
+  font-weight: 200;
+  color: $grey;
   font-size:18px;
-  padding:20px 20px 20px 20px;
+  padding-left:20px ;
   display:block;
-  width: 309px;
+  width: 80vw;
   height: 48px;
   border:1px solid #999;
   border-radius: 8px;
@@ -20,13 +22,14 @@
 
 
 label 				 {
+  font-family: $font-montserrat;
   color:#999; 
   background: none;
   font-size:18px;
   font-weight:normal;
   position:absolute;
   pointer-events:none;
-  left:15px;
+  left:16px;
   top:12px;
   padding: 0 4px ;
   transition:0.2s ease all; 
@@ -36,7 +39,7 @@ label 				 {
 
 /* active state */
 .input:focus ~ label, .input:valid ~ label 		{
-  top:-10px;
+  top:-8px;
   font-size: 14px;
   color:$dark-orange;
   background:$beige;
