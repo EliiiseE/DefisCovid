@@ -23,7 +23,7 @@
     margin: 0 auto;
     width: 15%;
     height: 15%;
-    background-color: var(--dark-orange);
+    background-color: $dark-orange;
     border-radius: 100%;
     -webkit-animation: sk-circleBounceDelay 1.2s infinite ease-in-out both;
             animation: sk-circleBounceDelay 1.2s infinite ease-in-out both;
@@ -138,23 +138,30 @@
   
   .title_planning{
     font-size: 24px;
-    font-family: var(--font-montserrat);
-    font-weight: var(--weight-regular);
-  }
-  
-  .explication_planning span{
-    font-size: 20px;
-    font-family: var(--font-montserrat);
-    font-weight: var(--weight-semi-bold);
+    font-family: $font-montserrat;
+    font-weight: $weight-regular;
   }
   
   .explication_planning{
     font-size: 20px;
-    font-family: var(--font-montserrat);
-    font-weight: var(--weight-regular);
+    font-family: $font-montserrat;
+    font-weight: $weight-regular;
     text-align: center;
+    span{
+      font-size: 20px;
+      font-family: $font-montserrat;
+      font-weight: $weight-semi-bold;
+    }
+    
   }
   
+  .error-planning{
+    font-size: 20px;
+    font-family: $font-montserrat;
+    font-weight: $weight-regular;
+    text-align: center;
+  }
+
   .challenge {
     display: flex;
     justify-content: center;
@@ -162,7 +169,7 @@
   }
   
   .challenge-container{
-  border: 2px solid var(--yellow);
+  border: 2px solid $yellow;
   border-radius: 50%;
   height: 309px;
   width: 309px;
@@ -176,23 +183,21 @@
   
   .title_challenge{
     font-size: 32px;
-    font-family: var(--font-roboto);
-    font-weight: var(--weight-light);
+    font-family: $font-roboto;
+    font-weight: $weight-light;
     text-align: center;
+    p {
+      margin: 0;
+      margin-top: 10px;
+    }
+      span{
+      font-size: 32px;
+      text-transform: uppercase;
+      font-family: $font-roboto;
+      font-weight: $weight-regular;
+    }
   }
-  
-  .title_challenge p {
-    margin: 0;
-    margin-top: 10px;
-  }
-  
-  .title_challenge span{
-    font-size: 32px;
-    text-transform: uppercase;
-    font-family: var(--font-roboto);
-    font-weight: var(--weight-regular);
-  }
-  
+
   .citation-and-agenda{
   display: flex;
   flex-direction: column;
@@ -213,7 +218,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: var(--dark-orange);
+    color: $dark-orange;
   }
   .slidecontainer {
     width: 100%;
@@ -229,69 +234,204 @@
     opacity: 0.7;
     -webkit-transition: .2s;
     transition: opacity .2s;
+    &:hover {
+      opacity: 1;
+    }
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: $dark-orange;
+      cursor: pointer;
+    }
+    &::-moz-range-thumb {
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      background:$dark-orange;
+      cursor: pointer;
+    }
   }
-  
-  .slider:hover {
-    opacity: 1;
-  }
-  
-  .slider::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background: var(--dark-orange);
-    cursor: pointer;
-  }
-  
-  .slider::-moz-range-thumb {
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    background:var(--dark-orange);
-    cursor: pointer;
-  }
-  
+
   .citation{
     font-size: 24px;
-    font-family: var(--font-montserrat);
-    font-weight: var(--weight-regular);
+    font-family: $font-montserrat;
+    font-weight: $weight-regular;
     text-align: center;
   }
   
   .agenda {
     list-style-type: none;
-    align-items: center;
     width: 270px;
     overflow-y: hidden;
     display: flex;
+    align-items: center;
     justify-content: space-between;
     overflow-x: hidden;
     transition: 0.4s ease;
     font-size: 28px;
-    font-family: var(--font-roboto);
-    font-weight: var(--weight-regular);
+    font-family: $font-roboto;
+    font-weight: $weight-regular;
+      .day_text{
+      font-size: 18px;
+      font-family: $font-roboto;
+      font-weight: $weight-light;
+    }
+      .day_number {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        font-size: 42px;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        padding: 30px;
+      }
+
+      li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-left: 15px;
+      }
+
+      li:nth-child(2) {
+        .day_number {
+          background: $yellow-hover;
+        }
+      }
+
+      li:first-child {
+        margin-left: 0;
+      }
+}
+  
+
+@media screen and (min-width: 750px) {
+  .title_planning {
+    font-size: 34px;
+  }
+
+  .explication_planning{
+    font-size: 30px;
+    span {
+    font-size: 30px;
+    }
+  }
+  .error-planning{
+      font-size: 30px;
+    }
+  .challenge-container{
+      border: 5px solid $yellow;
+      height: 626px;
+      width: 626px;
+    } 
+    
+  .title_challenge{
+      font-size: 60px;
+      p {
+        margin: 0;
+        margin-top: 10px;
+      }
+        span{
+        font-size: 60px;
+      }
+    }
+  .arrow{
+    width: 13px;
+    height: 24px;
+    }
+    .slider {
+      -webkit-appearance: none;
+      width: 473px;
+      height: 8px;
+      border-radius: 5px;
+     
+      &::-webkit-slider-thumb {
+        width: 26px;
+        height: 26px;
+      }
+      &::-moz-range-thumb {
+        width: 26px;
+        height: 26px;
+      }
+    }
+    .citation{
+      font-size: 40px;
+    }
+    
+    .agenda {
+      width: 592px;
+      font-size: 50px;
+        .day_text{
+        font-size: 30px;
+      }
+  }
+}
+
+
+@media screen and (min-width: 1094px) {
+  .title_planning {
+    font-size: 40px;
+  }
+    
+  .explication_planning{
+    font-size: 36px;
+    span {
+    font-size: 36px;
+    }
+  }
+
+  .error-planning{
+    font-size: 36px;
+  }
+  .challenge-container{
+    border: 8px solid $yellow;
+    height: 640px;
+    width: 640px;
+  } 
+  .title_challenge{
+    font-size: 70px;
+    p {
+      margin: 0;
+      margin-top: 10px;
+    }
+      span{
+      font-size: 70px;
+    }
+  }
+  .arrow{
+    width: 15px;
+    height: 31px;
+  }
+  .slider {
+    width: 529px;
+    height: 11px;
+
+    &::-webkit-slider-thumb {
+      width: 29px;
+      height: 29px;
+    }
+    &::-moz-range-thumb {
+      width: 29px;
+      height: 29px;
+    }
+  }
+
+  .citation{
+    font-size: 55px;
   }
   
-  .agenda span{
-    font-size: 18px;
-    font-family: var(--font-roboto);
-    font-weight: var(--weight-light);
-  }
-  
-  .agenda li {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    margin-left: 15px;
-    font-size: 42px;
-  }
-  
-  .agenda li:first-child {
-    margin-left: 0;
-  }
-  
-  
+  .agenda {
+    width: 639px;
+    font-size: 60px;
+      .day_text{
+      font-size: 35px;
+    }
+}
+} 

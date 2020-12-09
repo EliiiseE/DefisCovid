@@ -22,9 +22,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--yellow);
+    background-color: $yellow;
     p {
         text-align: center;
+    }
+    button {
+        padding: 10px 40px;
+    }
+    .buttons {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: row;
+        width: 70%;
     }
 }
 
@@ -34,33 +44,22 @@
     left: 0;
     width: 100vw;
     height: 50vh;
-    background-color: var(--black);
+    background-color: $black;
     clip-path: url("#clipCookie");
 }
 
 .title_cookie {
     font-size: 25px;
-    font-family: var(--font-montserrat);
-    font-weight: var(--weight-extra-bold);
+    font-family: $font-montserrat;
+    font-weight: $weight-extra-bold;
 }
 
 .explication_cookie {
     font-size: 25px;
-    font-family: var(--font-montserrat);
-    font-weight: var(--weight-bold);
+    font-family: $font-montserrat;
+    font-weight: $weight-bold;
 }
 
-.cookie .buttons {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: row;
-    width: 70%;
-}
-
-.cookie button {
-    padding: 10px 40px;
-}
 
 .button-accepted-container {
     display: flex;
@@ -69,29 +68,31 @@
 }
 
 .button-accepted {
-    background-color: var(--dark-orange);
-    color: var(--black-button);
+    background-color: $dark-orange;
+    color: $black-button;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 25px;
-    font-family: var(--font-montserrat);
-    font-weight: var(--weight-medium);
+    font-family: $font-montserrat;
+    font-weight: $weight-medium;
     transition-duration: 0.4s;
     cursor: pointer;
-    border: 1px solid var(--dark-orange);
+    border: 1px solid $dark-orange;
     border-radius: 61px;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.6);
     transition: box-shadow 0.4s ease;
     transition: font-family 0.4s ease;
     transition: font-weight 0.4s ease;
+
+    &:hover{
+        box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.6);
+        font-family: $font-montserrat;
+        font-weight: $weight-semi-bold;
+    }
 }
 
-.button-accepted:hover {
-    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.6);
-    font-family: var(--font-montserrat);
-    font-weight: var(--weight-semi-bold);
-}
+
 
 .button-canceled-container {
     display: flex;
@@ -101,30 +102,31 @@
 
 .button-canceled {
     background-color: transparent;
-    color: var(--black-button);
+    color: $black-button;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 25px;
-    font-family: var(--font-montserrat);
-    font-weight: var(--weight-medium);
+    font-family: $font-montserrat;
+    font-weight: $weight-medium;
     transition-duration: 0.4s;
     cursor: pointer;
-    border: 3px solid var(--dark-orange);
+    border: 3px solid $dark-orange;
     border-radius: 61px;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.6);
     transition: box-shadow 0.4s ease;
     transition: background-color 0.4s ease;
     transition: font-family 0.4s ease;
     transition: font-weight 0.4s ease;
+
+    &:hover{
+        box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.6);
+        background-color: $dark-orange;
+        font-family: $font-montserrat;
+        font-weight: $weight-semi-bold;
+    }
 }
 
-.button-canceled:hover {
-    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.6);
-    background-color: var(--dark-orange);
-    font-family: var(--font-montserrat);
-    font-weight: var(--weight-semi-bold);
-}
 
 @media screen and (max-width: 1060px) {
     .popup_cookie {
