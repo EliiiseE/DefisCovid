@@ -264,33 +264,50 @@
   
   .agenda {
     list-style-type: none;
-    align-items: center;
     width: 270px;
     overflow-y: hidden;
     display: flex;
+    align-items: center;
     justify-content: space-between;
     overflow-x: hidden;
     transition: 0.4s ease;
     font-size: 28px;
     font-family: $font-roboto;
     font-weight: $weight-regular;
-      span{
+      .day_text{
       font-size: 18px;
       font-family: $font-roboto;
       font-weight: $weight-light;
     }
-      li {
+      .day_number {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         height: 100%;
-        margin-left: 15px;
         font-size: 42px;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        padding: 30px;
+      }
+
+      li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-left: 15px;
+      }
+
+      li:nth-child(2) {
+        .day_number {
+          background: $yellow-hover;
+        }
+      }
+
       li:first-child {
         margin-left: 0;
-        }
-        
       }
 }
   
@@ -351,7 +368,7 @@
     .agenda {
       width: 592px;
       font-size: 50px;
-        span{
+        .day_text{
         font-size: 30px;
       }
   }
@@ -413,7 +430,7 @@
   .agenda {
     width: 639px;
     font-size: 60px;
-      span{
+      .day_text{
       font-size: 35px;
     }
 }

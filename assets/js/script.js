@@ -93,7 +93,7 @@ const displayPlanning = (planning) => {
 
   for(let i = 0; i < planning.length; i++) {
     nextDay.setDate(actualDay.getDate() + i)
-    $('.agenda').append(`<li><span>${days[nextDay.getDay()]}</span>${nextDay.getDate()}</li>`)
+    $('.agenda').append(`<li><span class="day_text">${days[nextDay.getDay()]}</span><span class="day_number">${nextDay.getDate()}</span></li>`)
   }
 }
 
@@ -119,6 +119,6 @@ $('.arrow').click(function() {
   if($(this).data('direction') == 'left') {
     agenda.css('transform', `translateX(${offset.left + 20}px)`)
   } else if($(this).data('direction') == 'right') {
-    agenda.css('transform', `translateX(${offset.left - 100}px)`)
+    agenda.css('transform', `translateX(${offset.left - 20}px)`)
   }
 })
