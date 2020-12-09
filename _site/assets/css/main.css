@@ -199,6 +199,10 @@ button { outline: none; }
 
 .agenda li:first-child { margin-left: 0; }
 
+@media screen and (min-width: 750px) { .title_planning { font-size: 34px; } .explication_planning { font-size: 30px; } .explication_planning span { font-size: 30px; } .error-planning { font-size: 30px; } .challenge-container { border: 5px solid #fcd34d; height: 626px; width: 626px; } .title_challenge { font-size: 60px; } .title_challenge p { margin: 0; margin-top: 10px; } .title_challenge span { font-size: 60px; } .arrow { width: 13px; height: 24px; } .slider { -webkit-appearance: none; width: 473px; height: 8px; border-radius: 5px; } .slider::-webkit-slider-thumb { width: 26px; height: 26px; } .slider::-moz-range-thumb { width: 26px; height: 26px; } .citation { font-size: 40px; } .agenda { width: 592px; font-size: 50px; } .agenda .day_text { font-size: 30px; } }
+
+@media screen and (min-width: 1094px) { .title_planning { font-size: 40px; } .explication_planning { font-size: 36px; } .explication_planning span { font-size: 36px; } .error-planning { font-size: 36px; } .challenge-container { border: 8px solid #fcd34d; height: 640px; width: 640px; } .title_challenge { font-size: 70px; } .title_challenge p { margin: 0; margin-top: 10px; } .title_challenge span { font-size: 70px; } .arrow { width: 15px; height: 31px; } .slider { width: 529px; height: 11px; } .slider::-webkit-slider-thumb { width: 29px; height: 29px; } .slider::-moz-range-thumb { width: 29px; height: 29px; } .citation { font-size: 55px; } .agenda { width: 639px; font-size: 60px; } .agenda .day_text { font-size: 35px; } }
+
 .trophy_head h2 { font-family: Montserrat; font-style: normal; font-weight: bold; font-size: 64px; line-height: 78px; text-align: center; color: #191847; }
 
 .trophy_head p { font-family: Montserrat; font-style: normal; font-weight: 500; font-size: 35px; line-height: 43px; color: #191847; }
@@ -216,9 +220,6 @@ button { outline: none; }
 .boxes .box .box-inner h3 { /*position: absolute; left: 40.48%; right: 0%; top: 2.34%; bottom: 0%;*/ font-family: Montserrat; font-style: normal; font-weight: 600; font-size: 24px; line-height: 43px; display: flex; align-items: center; text-align: center; color: #FFFFFF; text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); }
 
 @media (max-width: 600px) { .boxes .box .box-inner h3 { font-size: 13px; line-height: 16px; } }
-@media screen and (min-width: 750px) { .title_planning { font-size: 34px; } .explication_planning { font-size: 30px; } .explication_planning span { font-size: 30px; } .error-planning { font-size: 30px; } .challenge-container { border: 5px solid #fcd34d; height: 626px; width: 626px; } .title_challenge { font-size: 60px; } .title_challenge p { margin: 0; margin-top: 10px; } .title_challenge span { font-size: 60px; } .arrow { width: 13px; height: 24px; } .slider { -webkit-appearance: none; width: 473px; height: 8px; border-radius: 5px; } .slider::-webkit-slider-thumb { width: 26px; height: 26px; } .slider::-moz-range-thumb { width: 26px; height: 26px; } .citation { font-size: 40px; } .agenda { width: 592px; font-size: 50px; } .agenda .day_text { font-size: 30px; } }
-
-@media screen and (min-width: 1094px) { .title_planning { font-size: 40px; } .explication_planning { font-size: 36px; } .explication_planning span { font-size: 36px; } .error-planning { font-size: 36px; } .challenge-container { border: 8px solid #fcd34d; height: 640px; width: 640px; } .title_challenge { font-size: 70px; } .title_challenge p { margin: 0; margin-top: 10px; } .title_challenge span { font-size: 70px; } .arrow { width: 15px; height: 31px; } .slider { width: 529px; height: 11px; } .slider::-webkit-slider-thumb { width: 29px; height: 29px; } .slider::-moz-range-thumb { width: 29px; height: 29px; } .citation { font-size: 55px; } .agenda { width: 639px; font-size: 60px; } .agenda .day_text { font-size: 35px; } }
 
 /*.input POUR FORMULAIRE*/
 .group { position: relative; margin: 45px; }
