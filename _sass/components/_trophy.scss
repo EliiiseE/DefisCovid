@@ -16,6 +16,10 @@
         font-weight: 500;
         font-size: 35px;
         line-height: 43px;
+
+        max-width: 90vw;
+        margin-right: auto;
+        margin-left: auto;
         
         color: #191847;
     }
@@ -45,8 +49,12 @@
         border-radius: 16px;
 
         &.locked{
-            background: #467088;
+            background: #1F303C;
             border: 4px solid #FF604E;
+            
+            .trophy_icone {
+                opacity: 25%;
+            }
         }
         &.unlocked{
             background: #467088;
@@ -54,6 +62,22 @@
         }
 
         .box-inner{
+            width: 328px;
+            height: 120px;
+            border-radius: 16px;
+            // padding-right: 8px;
+            // padding-left: 8px;
+
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-around;
+            align-content: center;
+            overflow: hidden;
+
+            img {
+                padding-top: 8px;
+                padding-left: 5px;  
+            }
             h3{
                 /*position: absolute;
                 left: 40.48%;
@@ -65,7 +89,9 @@
                 font-style: normal;
                 font-weight: 600;
                 font-size: 24px;
-                line-height: 43px;
+                line-height: 33px;
+
+                align-self: center;
 
                 @media (max-width: 600px) {
                     font-size: 13px;
@@ -75,6 +101,9 @@
                 display: flex;
                 align-items: center;
                 text-align: center;
+                justify-content: flex-end;
+                margin-right: 10px;
+                margin-top: auto;
 
                 color: #FFFFFF;
 
