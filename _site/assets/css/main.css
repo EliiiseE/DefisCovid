@@ -55,6 +55,16 @@ body { background-color: #fffcf2; }
 
 @media screen and (max-width: 340px) { .cookie .buttons { flex-direction: column; } .cookie button { width: 80%; } .cookie button:first-child { margin-top: 20px; } .cookie button:last-child { margin-top: 15px; } }
 
+#nav { padding: 0; margin: 0; text-align: center; width: 1439px; height: 85; }
+
+#nav li { display: inline; list-style: none; list-style-type: none; }
+
+#nav a { display: inline-block; margin: 0 30px; }
+
+li a { display: block; color: #FF604E; text-decoration: none; font-family: "Montserrat", sans-serif; font-weight: 500; font-size: 36px; padding: 15px 15px 15px 15px; }
+
+li a:hover { background-color: #FF604E; color: white; }
+
 .text_preferences { display: flex; justify-content: center; align-items: center; flex-direction: column; margin: 35px; }
 
 .title_preferences { font-size: 24px; font-family: "Roboto", sans-serif; font-weight: 700; }

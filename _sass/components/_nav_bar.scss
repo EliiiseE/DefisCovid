@@ -1,0 +1,36 @@
+
+#nav {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    width: 1439px;
+    height: 85; 
+}
+
+#nav li{
+    display: inline;
+    list-style: none;
+    list-style-type: none;
+}
+
+#nav a{
+    display: inline-block;
+    margin: 0 30px;
+}
+
+
+li a {
+    display: block;
+    color: #FF604E;
+    text-decoration: none;
+    font-family: $font-montserrat;
+    font-weight: $weight-medium;
+    font-size: 36px;
+    padding: 15px 15px 15px 15px;
+}
+
+li a:hover {
+    background-color: #FF604E;
+    color: white;
+}
+
