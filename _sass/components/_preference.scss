@@ -95,3 +95,46 @@
     }
   }
   
+  @media screen and (min-width: 750px) {
+    .title_preferences {
+      font-size: 34px;
+    }
+    
+    .explication_preferences{
+      font-size: 30px;
+    }
+
+    .button-preferences {
+      flex-direction: row;
+      font-size: 28px;
+      height: 128px;
+      width: 332px;
+    }
+
+    .button-continue {
+      font-size: 31px;
+      height: 72px;
+      width: 396px;
+    }
+  }
+
+  @media screen and (min-width: 1094px) {
+    .title_preferences {
+      font-size: 40px;
+    }
+    
+    .explication_preferences{
+      font-size: 36px;
+    }
+
+    .button-preferences {
+      flex-direction: row;
+      border: 8px solid $dark-orange;
+    }
+
+    .button-continue {
+      font-size: 35px;
+      height: 72px;
+      width: 504px;
+    }
+  }

@@ -79,6 +79,10 @@ button { outline: none; }
 
 .button-continue:hover { box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.6); font-family: "Montserrat", sans-serif; font-weight: 600; }
 
+@media screen and (min-width: 750px) { .title_preferences { font-size: 34px; } .explication_preferences { font-size: 30px; } .button-preferences { flex-direction: row; font-size: 28px; height: 128px; width: 332px; } .button-continue { font-size: 31px; height: 72px; width: 396px; } }
+
+@media screen and (min-width: 1094px) { .title_preferences { font-size: 40px; } .explication_preferences { font-size: 36px; } .button-preferences { flex-direction: row; border: 8px solid #ff604e; } .button-continue { font-size: 35px; height: 72px; width: 504px; } }
+
 /* ANIMATION DU PLANNING */
 .loading-planning { margin: auto; display: none; }
 
@@ -190,6 +194,10 @@ button { outline: none; }
 .agenda li { display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100%; margin-left: 15px; font-size: 42px; }
 
 .agenda li li:first-child { margin-left: 0; }
+
+@media screen and (min-width: 750px) { .title_planning { font-size: 34px; } .explication_planning { font-size: 30px; } .explication_planning span { font-size: 30px; } .error-planning { font-size: 30px; } .challenge-container { border: 5px solid #fcd34d; height: 626px; width: 626px; } .title_challenge { font-size: 60px; } .title_challenge p { margin: 0; margin-top: 10px; } .title_challenge span { font-size: 60px; } .arrow { width: 13px; height: 24px; } .slider { -webkit-appearance: none; width: 473px; height: 8px; border-radius: 5px; } .slider::-webkit-slider-thumb { width: 26px; height: 26px; } .slider::-moz-range-thumb { width: 26px; height: 26px; } .citation { font-size: 40px; } .agenda { width: 592px; font-size: 50px; } .agenda span { font-size: 30px; } }
+
+@media screen and (min-width: 1094px) { .title_planning { font-size: 40px; } .explication_planning { font-size: 36px; } .explication_planning span { font-size: 36px; } .error-planning { font-size: 36px; } .challenge-container { border: 8px solid #fcd34d; height: 640px; width: 640px; } .title_challenge { font-size: 70px; } .title_challenge p { margin: 0; margin-top: 10px; } .title_challenge span { font-size: 70px; } .arrow { width: 15px; height: 31px; } .slider { width: 529px; height: 11px; } .slider::-webkit-slider-thumb { width: 29px; height: 29px; } .slider::-moz-range-thumb { width: 29px; height: 29px; } .citation { font-size: 55px; } .agenda { width: 639px; font-size: 60px; } .agenda span { font-size: 35px; } }
 
 /*.input POUR FORMULAIRE*/
 .group { position: relative; margin: 45px; }
