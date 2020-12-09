@@ -1,0 +1,62 @@
+.title {
+    margin: 1em;
+    font-family: $font-roboto;
+}
+
+.title h1{
+    font-weight: bold;
+    color: $black;
+}
+
+.title h2{
+    color: $black;
+}
+
+.first_info {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+p{
+    font-family: $font-montserrat;
+    color: $black;
+}
+
+.girl {
+    width: 100%;
+}
+
+.logos {
+    flex-direction: column;
+    // display: block;
+    // margin-left: auto;
+    // margin-right: auto;
+    // height: 100vh;
+    
+}
+
+.logos img {
+
+    width: 15%;
+    flex-direction: column;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+   
+    
+}
+
+.logos h3 {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+h3{
+    font-family: $font-montserrat;
+    color: $black;
+    font-weight: 400;
+}
+
+

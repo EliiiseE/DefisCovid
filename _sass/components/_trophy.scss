@@ -25,6 +25,16 @@
     }
 }
 
+.trophy_status_parent {
+    position: relative;
+
+    .trophy_status {
+        position: absolute;
+
+        bottom: 5%;
+        left: 40px;
+}
+}
 
 .boxes {
     display: flex;
