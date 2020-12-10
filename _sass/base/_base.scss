@@ -25,7 +25,7 @@ html, body {
 }
 
 html {
-    scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
@@ -33,5 +33,5 @@ body {
     overflow-x: hidden;
 }
 .overflow{
-    overflow-x: hidden;
+    scroll-behavior: smooth;
 }
