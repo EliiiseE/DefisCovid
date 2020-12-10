@@ -110,6 +110,10 @@ label {
   width: 0vw;
   bottom: -3rem;
 }
+.flex_button {
+  display: flex;
+  justify-content: center;
+}
 
 @media screen and (min-width: 600px) {
   .svg_form_mobile {
@@ -154,10 +158,7 @@ label {
     top: 0.9rem;
     font-size: 30px;
   }
-  .flex_button {
-    display: flex;
-    justify-content: center;
-  }
+
   .group {
     margin: 24px 64px 24px 64px;
   }

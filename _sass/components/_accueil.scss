@@ -62,9 +62,8 @@
 .logos {
     flex-direction: column;
     display: flex;
-    width: 100%;
-
-    .icon{
+    width: 100vw;
+    .icon{position: static;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -79,52 +78,52 @@
             font-family: $font-montserrat;
             color: $black;
             font-size: 24px;
-            margin-top: -50px;
+            // margin-top: -50px;
         }
     }
 }
 
 
-.logos {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 80%;
-    margin: auto;
-    .image {
-    position: relative;
-    width: 300px;
-    height: 300px;
-    margin: auto;
-        span{
-            content: "";
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-35%, -20%);
-            background: rgba(252, 211, 77, 0.52);
-            clip-path: url("#clipIcon");
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-        }
-    }
+// .logos {
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     width: 80%;
+//     margin: auto;
+//     .image {
+//     position: relative;
+//     width: 300px;
+//     height: 300px;
+//     margin: auto;
+//         span{
+//             content: "";
+//             position: absolute;
+//             top: 50%;
+//             left: 50%;
+//             transform: translate(-35%, -20%);
+//             background: rgba(252, 211, 77, 0.52);
+//             clip-path: url("#clipIcon");
+//             width: 100%;
+//             height: 100%;
+//             z-index: -1;
+//         }
+//     }
 
-    .fun {
-      background: url('../../assets/images/confetti.png') no-repeat center;
-      background-size: 101px 110px;
-    }
+//     .fun {
+//       background: url('../../assets/images/confetti.png') no-repeat center;
+//       background-size: 101px 110px;
+//     }
 
-    .mission {
-        background: url('../../assets/images/mission.png') no-repeat center;
-        background-size: 101px 110px;
-      }
+//     .mission {
+//         background: url('../../assets/images/mission.png') no-repeat center;
+//         background-size: 101px 110px;
+//       }
 
-    .fusee {
-    background: url('../../assets/images/rocket.png') no-repeat center;
-        background-size: 101px 110px;
-    }
-}
+//     .fusee {
+//     background: url('../../assets/images/rocket.png') no-repeat center;
+//         background-size: 101px 110px;
+//     }
+// }
 
 
 @media screen and (min-width: 1094px) {
