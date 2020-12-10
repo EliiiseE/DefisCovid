@@ -13,10 +13,14 @@
         h1{
             font-weight: bold;
             color: $black;
+            font-size: 32px;
+            margin: 0;
         }
 
         h2{
             color: $black;
+            font-size: 32px;
+            margin: 0;
         }
     }
 
@@ -40,6 +44,7 @@
     .txt2{
         width: 100%;
         font-family: $font-montserrat;
+        font-size: 18px;
     }
 }
 
@@ -80,10 +85,14 @@
             h1{
                 font-weight: bold;
                 color: $black;
+                font-size: 50px;
+                margin: 0;
             }
-    
+
             h2{
                 color: $black;
+                font-size: 50px;
+                margin: 0;
             }
         }
     
@@ -103,12 +112,13 @@
         .txt1{
             width: 50%;
             font-family: $font-montserrat;
-            font-size: 18px;
+            font-size: 40px;
         }
     
         .txt2{
             width: 50%;
             font-family: $font-montserrat;
+            font-size: 40px;
         }
     }
 
