@@ -1,65 +1,65 @@
-.position{
-    place-content: end;
-}
+// .position{
+//     place-content: end;
+// }
 
 
-#nav {
-    margin: 0 auto;
-    width: 100vw;
-    top: 0px;
-    position: fixed ;
+// #nav {
+//     margin: 0 auto;
+//     width: 100vw;
+//     top: 0px;
+//     position: fixed ;
     
-}
+// }
 
-nav ul{
-    list-style-type: none;
+// nav ul{
+//     list-style-type: none;
     
-}
+// }
 
-nav li{
-    float: right;
-    // width: 20%;
-    text-align: center;
-}
+// nav li{
+//     float: right;
+//     // width: 20%;
+//     text-align: center;
+// }
 
-nav a{
-    display: block;
-}
+// nav a{
+//     display: block;
+// }
 
-nav ul::after{
-    content: "";
-    display: table;
-    clear: both;
-}
+// nav ul::after{
+//     content: "";
+//     display: table;
+//     clear: both;
+// }
 
-.liennav {
-    color:$dark-orange;
-    text-decoration: none;
-    font-family: $font-montserrat;
-    font-weight: $weight-medium;
-    font-size: 36px;
-    padding: 15px 15px 15px 15px;
-}
+// .liennav {
+//     color:$dark-orange;
+//     text-decoration: none;
+//     font-family: $font-montserrat;
+//     font-weight: $weight-medium;
+//     font-size: 36px;
+//     padding: 15px 15px 15px 15px;
+// }
 
-.liennav:hover {
-    background-color:$dark-orange;
-    color: white;
-    border: 2px solid $yellow-hover;
-}
+// .liennav:hover {
+//     background-color:$dark-orange;
+//     color: white;
+//     border: 2px solid $yellow-hover;
+// }
 
 @media (max-width: 600px) {
-    nav{position: fixed;;
+    nav{position: fixed;
     bottom : 0;
-   
-}
+ }
 #nav {
-    width: 100vw;
+        width: 100vw;
         margin: 0 auto;
         position: sticky ;
         //height: 0;
         bottom: 0;
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-around;
+        align-items: flex-end;
     }
     
     nav ul{
@@ -81,7 +81,7 @@ nav ul::after{
     }
     
     nav ul::after{
-        content: "";
+        // content: "";
         display: table;
         clear: both;
     }
@@ -102,13 +102,12 @@ nav ul::after{
     }
     
     .images{
-     max-width: 22px;
+     max-height: 22px;
     } 
 
    .liste{
     display: flex;   
     flex-direction: column;
-    justify-content: center;
     align-items: center;
    }
 }
