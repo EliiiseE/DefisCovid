@@ -1,0 +1,86 @@
+.title {
+    margin: 1em;
+    font-family: $font-roboto;
+}
+
+.title h1{
+    font-weight: bold;
+    color: $black;
+}
+
+.title h2{
+    color: $black;
+}
+
+.first_info {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+p{
+    font-family: $font-montserrat;
+    color: $black;
+}
+
+.girl {
+    width: 100%;
+}
+
+.logos {
+    flex-direction: column;
+    // display: block;
+    // margin-left: auto;
+    // margin-right: auto;
+    // height: 100vh;
+    
+}
+
+.logos {
+
+    img {
+        width: 15%;
+        flex-direction: column;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
+
+.logos h3 {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+h3{
+    font-family: $font-montserrat;
+    color: $black;
+    font-weight: 400;
+}
+
+// Test pour mettre le fond
+.logos {
+    .test {
+    position: relative;
+    background: url('../../assets/images/confetti.png') no-repeat center;
+    background-size: 160px 160px;
+    width: 300px;
+    height: 300px;
+    margin: auto;
+    span{
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-35%, -20%);
+        background: rgba(252, 211, 77, 0.52);
+        clip-path: url("#clipIcon");
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+}
+}
+// Test pour mettre le fond

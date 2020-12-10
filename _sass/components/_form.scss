@@ -2,31 +2,45 @@
   
 .group 			  { 
     position:relative; 
-    margin:45px; 
+    margin:32px; 
+    * {
+      box-sizing: border-box;
+    }
+  }
+  .test {
+  font-family: $font-montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
   }
   
 .input 				{
-  font-size:18px;
-  padding:20px 20px 20px 20px;
+  font-family: $font-montserrat;
+  font-weight: 500;
+  font-style: italic;
+  color: $grey;
+  font-size:14px;
+  padding-left:20px ;
   display:block;
-  width: 309px;
+  width: 80vw;
   height: 48px;
   border:1px solid #999;
   border-radius: 8px;
-  background-color: $beige;
+  background-color: $beige
 }
 
 .input:focus 		{ outline:none; }
 
 
 label 				 {
+  font-family: $font-montserrat;
   color:#999; 
   background: none;
-  font-size:18px;
-  font-weight:normal;
+  font-size:20px;
+  font-weight:500;
   position:absolute;
   pointer-events:none;
-  left:15px;
+  left:16px;
   top:12px;
   padding: 0 4px ;
   transition:0.2s ease all; 
@@ -36,8 +50,9 @@ label 				 {
 
 /* active state */
 .input:focus ~ label, .input:valid ~ label 		{
-  top:-10px;
-  font-size: 14px;
+  top:-12px;
+  font-size: 18px;
+  font-weight: 600;
   color:$dark-orange;
   background:$beige;
 }

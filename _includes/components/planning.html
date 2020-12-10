@@ -1,4 +1,4 @@
-<div class="planning">
+<div class="planning" id="planning">
     <div class="text_planning">
       <div class="title_planning">
         <p>Hey te revoilà ! 😇</p>
@@ -18,7 +18,7 @@
             <img src="assets/images/cake.svg" alt="YummyCake">
           </div>
           <div class="title_challenge">
-            <p>Aujourd’hui tu dois faire un <span>gâteau géant</span></p>
+            <p id="title_challenge">Aujourd’hui tu dois faire un <span>gâteau géant</span></p>
           </div>
         </div>
       </div>
@@ -33,12 +33,12 @@
               alt="Flèche de navigation de droite">
           </div>
           <div class="agenda_slider">
-            <input type="range" min="1" max="14" value="2" class="slider" id="myRange">
+            <input type="range" min="0" max="14" value="0" step="1" class="slider" id="myRange">
           </div>
         </div>
       </div>
       <div class="button-continue-container">
-        <button class="button-continue" onclick="finishMission()">J'ai finis ma mission !</button>
+        <a href="#missions" class="js-scrollTo"><button class="button-continue" onclick="finishMission()">J'ai finis ma mission !</button></a>
       </div>
     </div>
 

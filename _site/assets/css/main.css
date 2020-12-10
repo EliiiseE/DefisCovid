@@ -27,13 +27,13 @@ body { background-color: #fffcf2; }
 
 .button-accepted-container { display: flex; justify-content: center; align-items: center; }
 
-.button-accepted { background-color: #ff604e; color: #292929; text-align: center; text-decoration: none; display: inline-block; font-size: 25px; font-family: "Montserrat", sans-serif; font-weight: 500; transition-duration: 0.4s; cursor: pointer; border: 1px solid #ff604e; border-radius: 61px; box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.6); transition: box-shadow 0.4s ease; transition: font-family 0.4s ease; transition: font-weight 0.4s ease; }
+.button-accepted { background-color: #ff604e; color: #292929; text-align: center; text-decoration: none; display: inline-block; font-size: 25px; font-family: "Montserrat", sans-serif; font-weight: 500; cursor: pointer; border: 1px solid #ff604e; border-radius: 61px; box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.6); transition: box-shadow 0.4s ease, font-family 0.4s ease, font-weight 0.4s ease; }
 
 .button-accepted:hover { box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.6); font-family: "Montserrat", sans-serif; font-weight: 600; }
 
 .button-canceled-container { display: flex; justify-content: center; align-items: center; }
 
-.button-canceled { background-color: transparent; color: #292929; text-align: center; text-decoration: none; display: inline-block; font-size: 25px; font-family: "Montserrat", sans-serif; font-weight: 500; transition-duration: 0.4s; cursor: pointer; border: 3px solid #ff604e; border-radius: 61px; box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.6); transition: box-shadow 0.4s ease; transition: background-color 0.4s ease; transition: font-family 0.4s ease; transition: font-weight 0.4s ease; }
+.button-canceled { background-color: transparent; color: #292929; text-align: center; text-decoration: none; display: inline-block; font-size: 25px; font-family: "Montserrat", sans-serif; font-weight: 500; cursor: pointer; border: 3px solid #ff604e; border-radius: 61px; box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.6); transition: box-shadow 0.4s ease, font-family 0.4s ease, font-weight 0.4s ease, background-color 0.4s ease; }
 
 .button-canceled:hover { box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.6); background-color: #ff604e; font-family: "Montserrat", sans-serif; font-weight: 600; }
 
@@ -55,6 +55,40 @@ body { background-color: #fffcf2; }
 
 @media screen and (max-width: 340px) { .cookie .buttons { flex-direction: column; } .cookie button { width: 80%; } .cookie button:first-child { margin-top: 20px; } .cookie button:last-child { margin-top: 15px; } }
 
+#nav { padding: 0; margin: 0; text-align: center; width: 1439px; height: 85; }
+
+#nav li { display: inline; list-style: none; list-style-type: none; }
+
+#nav a { display: inline-block; margin: 0 30px; }
+
+li a { display: block; color: #FF604E; text-decoration: none; font-family: "Montserrat", sans-serif; font-weight: 500; font-size: 36px; padding: 15px 15px 15px 15px; }
+
+li a:hover { background-color: #FF604E; color: white; }
+
+.title { margin: 1em; font-family: "Roboto", sans-serif; }
+
+.title h1 { font-weight: bold; color: #191847; }
+
+.title h2 { color: #191847; }
+
+.first_info { display: flex; justify-content: space-between; flex-direction: row; }
+
+p { font-family: "Montserrat", sans-serif; color: #191847; }
+
+.girl { width: 100%; }
+
+.logos { flex-direction: column; }
+
+.logos img { width: 15%; flex-direction: column; display: block; margin-left: auto; margin-right: auto; }
+
+.logos h3 { margin-left: auto; margin-right: auto; text-align: center; }
+
+h3 { font-family: "Montserrat", sans-serif; color: #191847; font-weight: 400; }
+
+.logos .test { position: relative; background: url("../../assets/images/confetti.png") no-repeat center; background-size: 160px 160px; width: 300px; height: 300px; margin: auto; }
+
+.logos .test span { content: ""; position: absolute; top: 50%; left: 50%; transform: translate(-35%, -20%); background: rgba(252, 211, 77, 0.52); clip-path: url("#clipIcon"); width: 100%; height: 100%; z-index: -1; }
+
 .text_preferences { display: flex; justify-content: center; align-items: center; flex-direction: column; margin: 35px; }
 
 .title_preferences { font-size: 24px; font-family: "Roboto", sans-serif; font-weight: 700; }
@@ -63,19 +97,17 @@ body { background-color: #fffcf2; }
 
 button { outline: none; }
 
-.buttons { display: flex; justify-content: center; align-items: center; flex-direction: column; }
+.buttons { display: flex; justify-content: space-around; align-items: center; flex-wrap: wrap; max-width: 1200px; margin: auto; }
 
-.button-preferences { background-color: #fffcf2; color: #191847; text-align: center; text-decoration: none; display: inline-block; font-size: 24px; font-family: "Montserrat", sans-serif; font-weight: 500; text-transform: uppercase; margin-top: 35px; transition-duration: 0.4s; cursor: pointer; border: 4px solid #ff604e; border-radius: 61px; height: 72px; width: 259px; box-shadow: 2px 5px 2px #bebebe; }
-
-.button-preferences:first-child { margin-top: 0; }
+.button-preferences { background-color: #fffcf2; color: #191847; text-align: center; text-decoration: none; display: inline-block; font-size: 24px; font-family: "Montserrat", sans-serif; font-weight: 500; text-transform: uppercase; margin-top: 35px; transition: background-color 0.4s ease, font-family 0.4s ease, font-weight 0.4s ease; cursor: pointer; border: 4px solid #ff604e; border-radius: 61px; height: 72px; width: 259px; box-shadow: 2px 5px 2px #bebebe; }
 
 .button-preferences:hover { background-color: #ffcdc1; font-family: "Montserrat", sans-serif; font-weight: 600; }
 
 .button-preferences.active { background-color: #ffcdc1; font-family: "Montserrat", sans-serif; font-weight: 600; }
 
-.button-continue-container { display: flex; justify-content: center; align-items: center; }
+.button-continue-container { display: flex; justify-content: center; align-items: center; margin-top: 86px; }
 
-.button-continue { background-color: #ff604e; color: #292929; text-align: center; text-decoration: none; display: inline-block; font-size: 20px; font-family: "Montserrat", sans-serif; font-weight: 500; margin-top: 86px; transition-duration: 0.4s; cursor: pointer; border: 6px solid #ff604e; border-radius: 61px; box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.6); transition: 0.4s ease; height: 38px; width: 260px; }
+.button-continue { background-color: #ff604e; color: #292929; text-align: center; text-decoration: none; display: inline-block; font-size: 20px; font-family: "Montserrat", sans-serif; font-weight: 500; cursor: pointer; border: 6px solid #ff604e; border-radius: 61px; box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.6); transition: 0.4s ease; height: 38px; width: 260px; }
 
 .button-continue:hover { box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.6); font-family: "Montserrat", sans-serif; font-weight: 600; }
 
@@ -155,7 +187,7 @@ button { outline: none; }
 
 .explication_planning span { font-size: 20px; font-family: "Montserrat", sans-serif; font-weight: 600; }
 
-.error-planning { font-size: 20px; font-family: "Montserrat", sans-serif; font-weight: 400; text-align: center; }
+.error-planning { font-size: 20px; font-family: "Montserrat", sans-serif; font-weight: 400; text-align: center; color: #ff604e; width: 70%; margin: auto; margin-top: 30px; }
 
 .challenge { display: flex; justify-content: center; align-items: center; }
 
@@ -171,7 +203,7 @@ button { outline: none; }
 
 .agenda_arrow { display: flex; justify-content: center; align-items: center; }
 
-.arrow { width: 8px; height: 16px; }
+.arrow { width: 8px; height: 16px; cursor: pointer; }
 
 .agenda_slider { display: flex; justify-content: center; align-items: center; color: #ff604e; }
 
@@ -187,15 +219,17 @@ button { outline: none; }
 
 .citation { font-size: 24px; font-family: "Montserrat", sans-serif; font-weight: 400; text-align: center; }
 
+.agenda-container * { box-sizing: border-box; }
+
 .agenda { list-style-type: none; width: 270px; overflow-y: hidden; display: flex; align-items: center; justify-content: space-between; overflow-x: hidden; transition: 0.4s ease; font-size: 28px; font-family: "Roboto", sans-serif; font-weight: 400; }
 
 .agenda .day_text { font-size: 18px; font-family: "Roboto", sans-serif; font-weight: 300; }
 
-.agenda .day_number { display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100%; font-size: 42px; width: 40px; height: 40px; border-radius: 50%; padding: 30px; }
+.agenda .day_number { display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100%; font-size: 42px; width: 40px; height: 40px; border-radius: 50%; padding: 30px; cursor: pointer; }
+
+.agenda .day_number.active { background: #fde79f; }
 
 .agenda li { display: flex; justify-content: center; align-items: center; flex-direction: column; margin-left: 15px; }
-
-.agenda li:nth-child(2) .day_number { background: #fde79f; }
 
 .agenda li:first-child { margin-left: 0; }
 
@@ -205,7 +239,11 @@ button { outline: none; }
 
 .trophy_head h2 { font-family: Montserrat; font-style: normal; font-weight: bold; font-size: 64px; line-height: 78px; text-align: center; color: #191847; }
 
-.trophy_head p { font-family: Montserrat; font-style: normal; font-weight: 500; font-size: 35px; line-height: 43px; color: #191847; }
+.trophy_head p { font-family: Montserrat; font-style: normal; font-weight: 500; font-size: 35px; line-height: 43px; max-width: 90vw; margin-right: auto; margin-left: auto; color: #191847; }
+
+.trophy_status_parent { position: relative; }
+
+.trophy_status_parent .trophy_status { position: absolute; bottom: 5%; left: 40px; }
 
 .boxes { display: flex; justify-content: space-around; flex-wrap: wrap; max-width: 1200px; margin-left: auto; margin-right: auto; }
 
@@ -213,25 +251,35 @@ button { outline: none; }
 
 @media (max-width: 600px) { .boxes .box { width: 112px; height: 112px; } }
 
-.boxes .box.locked { background: #467088; border: 4px solid #FF604E; }
+.boxes .box.locked { background: #1F303C; border: 4px solid #FF604E; }
+
+.boxes .box.locked .trophy_icone { opacity: 25%; }
 
 .boxes .box.unlocked { background: #467088; border: 4px solid #FCD34D; }
 
-.boxes .box .box-inner h3 { /*position: absolute; left: 40.48%; right: 0%; top: 2.34%; bottom: 0%;*/ font-family: Montserrat; font-style: normal; font-weight: 600; font-size: 24px; line-height: 43px; display: flex; align-items: center; text-align: center; color: #FFFFFF; text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); }
+.boxes .box .box-inner { width: 328px; height: 120px; border-radius: 16px; display: flex; flex-direction: row-reverse; justify-content: space-around; align-content: center; overflow: hidden; }
+
+.boxes .box .box-inner img { padding-top: 8px; padding-left: 5px; }
+
+.boxes .box .box-inner h3 { /*position: absolute; left: 40.48%; right: 0%; top: 2.34%; bottom: 0%;*/ font-family: Montserrat; font-style: normal; font-weight: 600; font-size: 24px; line-height: 33px; align-self: center; display: flex; align-items: center; text-align: center; justify-content: flex-end; margin-right: 10px; margin-top: auto; color: #FFFFFF; text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); }
 
 @media (max-width: 600px) { .boxes .box .box-inner h3 { font-size: 13px; line-height: 16px; } }
 
 /*.input POUR FORMULAIRE*/
-.group { position: relative; margin: 45px; }
+.group { position: relative; margin: 32px; }
 
-.input { font-size: 18px; padding: 20px 20px 20px 20px; display: block; width: 309px; height: 48px; border: 1px solid #999; border-radius: 8px; background-color: #fffcf2; }
+.group * { box-sizing: border-box; }
+
+.test { font-family: "Montserrat", sans-serif; font-style: normal; font-weight: normal; font-size: 18px; }
+
+.input { font-family: "Montserrat", sans-serif; font-weight: 500; font-style: italic; color: #d6d6d6; font-size: 14px; padding-left: 20px; display: block; width: 80vw; height: 48px; border: 1px solid #999; border-radius: 8px; background-color: #fffcf2; }
 
 .input:focus { outline: none; }
 
-label { color: #999; background: none; font-size: 18px; font-weight: normal; position: absolute; pointer-events: none; left: 15px; top: 12px; padding: 0 4px; transition: 0.2s ease all; -moz-transition: 0.2s ease all; -webkit-transition: 0.2s ease all; }
+label { font-family: "Montserrat", sans-serif; color: #999; background: none; font-size: 20px; font-weight: 500; position: absolute; pointer-events: none; left: 16px; top: 12px; padding: 0 4px; transition: 0.2s ease all; -moz-transition: 0.2s ease all; -webkit-transition: 0.2s ease all; }
 
 /* active state */
-.input:focus ~ label, .input:valid ~ label { top: -10px; font-size: 14px; color: #ff604e; background: #fffcf2; }
+.input:focus ~ label, .input:valid ~ label { top: -12px; font-size: 18px; font-weight: 600; color: #ff604e; background: #fffcf2; }
 
 .input:focus, .input:valid { top: -10px; color: #191847; border: 1px solid #ff604e; }
 

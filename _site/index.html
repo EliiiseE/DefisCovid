@@ -1,16 +1,18 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="fr-FR">
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DéfisCovid</title>
     <meta charset="utf-8">
-    <title>Happy Jekylling! - </title>
-    <link rel="stylesheet" href="/assets/css/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    
+    <!-- External links -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;500;700;900&display=swap"
-    rel="stylesheet">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://kit.fontawesome.com/f69c2bce58.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/f69c2bce58.js"></script>
   </head>
   <body>
     <svg width="0" height="0" viewBox="0 0 1 1" preserveAspectRatio="none" class="my-0"
@@ -22,7 +24,7 @@
     </defs>
 </svg>
 
-<div class="cookie">
+<div class="cookie" style="display: none;">
     <div class="background-wave"></div>
     <div class="popup_cookie">
         <img src="assets/images/cookie.svg" alt="Image de cookies">
@@ -40,10 +42,72 @@
     </div>
 </div>
 
-<main class="main" style="display: none;" >
-        
-        
-    <div class="preferences">
+<main class="main" >
+    <div class="nav">
+    <ul id="nav">
+        <li><a href="">ACCUEIL</a></li>
+        <li><a href="">PLANNING</a></li>
+        <li><a href="">TROPHÉES</a></li> 
+      </ul>
+</div>
+    
+    <svg width="0" height="0" viewBox="0 0 1 1" preserveAspectRatio="none" class="my-0"
+    style="position:absolute; pointer-events: none;">
+    <defs>
+        <clipPath id="clipIcon">
+            <path d="M76.2008 7.2841C81.2712 19.9415 139.158 28.3798 167.468 31.0168C224.51 19.7156 215.637 69.4411 190.285 101.085C170.003 126.4 99.0176 131.975 66.06 131.598C42.8206 122.18 -2.89765 92.9479 0.144598 51.3591C3.94741 -0.626795 69.8628 -8.5377 76.2008 7.2841Z"/>
+        </clipPath>
+    </defs>      
+</svg>
+
+<div class="title">
+    <h1>#DÉFICOVID</h1>
+    <h2>Qu'est-ce que c'est ?</h2>
+</div>
+
+<div class="first_info">
+    <div>
+        <img src="../../assets/images/flatdraw.png" alt="Image d'une fille qui court" class="girl">
+    </div>
+
+    <div>
+        <p class="txt_right">Tous les jours de nouveaux défis à te proposer pour t'accompagner et te soutenir. 
+        </br> Les défis sont adaptés en fonction de toi et tes choix !</p>
+    </div>
+</div>
+
+<div>
+    <p>Tu trouveras aussi des citations et astuces pour te relaxer et survivre à cet épidémie !</p>
+</div>
+
+<div class="logos">
+    <!-- Test pour mettre le fond -->
+    <div class="icon">
+        <div class="test" src="../../assets/images/confetti.png" alt="logo confettis"><span></span></div>
+        <h3>TEST</h3>
+    </div>
+    <!-- Test pour mettre le fond -->
+
+    <div class="icon">
+        <img src="../../assets/images/confetti.png" alt="logo confettis">
+        <h3>ACTIVITÉS FUN</h3>
+    </div>
+
+    <div class="icon">
+        <img src="../../assets/images/mission.png" alt="logo mission">
+        <h3>SE DÉFIER</h3>
+    </div>
+
+    <div class="icon">
+        <img src="../../assets/images/rocket.png" alt="logo fusée">
+        <h3>OSER L'IMPENSABLE</h3>
+    </div>
+</div>
+
+<div class="button-continue-container">
+    <a href="#preferences" class="js-scrollTo"><button class="button-continue"> Choisir ses préférences </button></a>
+</div>    
+    <div class="preferences" id="preferences">
     <div class="text_preferences">
         <div class="title_preferences">
             <p>Choisis tes préférences ici ! </p>
@@ -62,7 +126,7 @@
     </div>
     <div class="generate-planning">
         <div class="button-continue-container">
-            <button class="button-continue" onclick="generatePlanning()">Générer mon planning</button>
+            <a href="#planning" class="js-scrollTo"><button class="button-continue" onclick="generatePlanning()">Générer mon planning</button></a>
         </div>
         <p class="error-planning" style="display: none;">Afin de générer votre planning, vous devez choisir des
             préférences 😉</p>
@@ -84,7 +148,7 @@
         </div>
     </div>
 </div>    
-    <div class="planning">
+    <div class="planning" id="planning">
     <div class="text_planning">
       <div class="title_planning">
         <p>Hey te revoilà ! 😇</p>
@@ -104,7 +168,7 @@
             <img src="assets/images/cake.svg" alt="YummyCake">
           </div>
           <div class="title_challenge">
-            <p>Aujourd’hui tu dois faire un <span>gâteau géant</span></p>
+            <p id="title_challenge">Aujourd’hui tu dois faire un <span>gâteau géant</span></p>
           </div>
         </div>
       </div>
@@ -119,18 +183,18 @@
               alt="Flèche de navigation de droite">
           </div>
           <div class="agenda_slider">
-            <input type="range" min="1" max="14" value="2" class="slider" id="myRange">
+            <input type="range" min="0" max="14" value="0" step="1" class="slider" id="myRange">
           </div>
         </div>
       </div>
       <div class="button-continue-container">
-        <button class="button-continue" onclick="finishMission()">J'ai finis ma mission !</button>
+        <a href="#missions" class="js-scrollTo"><button class="button-continue" onclick="finishMission()">J'ai finis ma mission !</button></a>
       </div>
     </div>
 
   </div>
      
-    <div class="trophy_head">
+    <div class="trophy_head" id="missions">
     <h2>MA GALERIE TROPHÉE</h2>
     <p>Ici tu peux retrouver tous tes trophées collectionnés pendant ta période d'isolement !</p>
 </div>
@@ -139,64 +203,139 @@
 
     <div class="box unlocked">
     <div class="box-inner">
-        <h3>Master Cake</h3>
+        <h3>Master<br />Cake</h3>
+        <img class="trophy_icone" src="/assets/images/trophy_cake.svg" />
+    </div>
+    <div class="trophy_status_parent">
+        <img class="trophy_status" src="/assets/images/trophy_locked.svg" />
     </div>
 </div>
     <div class="box locked">
     <div class="box-inner">
-        <h3>Mâsta Kêku</h3>
+        <h3>Bijoutier<br />Expert en<br />pâtes</h3>
+        <img class="trophy_icone" src="/assets/images/trophy_pates.svg" />
+    </div>
+    <div class="trophy_status_parent">
+        <img class="trophy_status" src="/assets/images/trophy_locked.svg" />
     </div>
 </div>
     <div class="box locked">
     <div class="box-inner">
-        <h3>Haha</h3>
+        <h3>Padawan<br />Reconnu</h3>
+        <img class="trophy_icone" src="/assets/images/trophy_padawan.svg" />
+    </div>
+    <div class="trophy_status_parent">
+        <img class="trophy_status" src="/assets/images/trophy_locked.svg" />
     </div>
 </div>
     <div class="box locked">
     <div class="box-inner">
-        <h3>Il m'en fallait 4</h3>
+        <h3>Pro de la<br />Débrouille</h3>
+        <img class="trophy_icone" src="/assets/images/trophy_debrouille.svg" />
+    </div>
+    <div class="trophy_status_parent">
+        <img class="trophy_status" src="/assets/images/trophy_locked.svg" />
     </div>
 </div>
     <div class="box locked">
     <div class="box-inner">
-        <h3>Tant qu'à faire..</h3>
+        <h3>Agent<br />Secret</h3>
+        <img class="trophy_icone" src="/assets/images/trophy_agent.svg" />
+    </div>
+    <div class="trophy_status_parent">
+        <img class="trophy_status" src="/assets/images/trophy_locked.svg" />
     </div>
 </div>
     <div class="box locked">
     <div class="box-inner">
-        <h3>Autant en mettre 6 pour 2 étages!</h3>
+        <h3>Planificateur<br />Hors Pair</h3>
+        <img class="trophy_icone" src="/assets/images/trophy_planificateur.svg" />
+    </div>
+    <div class="trophy_status_parent">
+        <img class="trophy_status" src="/assets/images/trophy_locked.svg" />
+    </div>
+</div>
+    <div class="box locked">
+    <div class="box-inner">
+        <h3>Expert(e) en<br />Culture<br />Générale</h3>
+        <img class="trophy_icone" src="/assets/images/trophy_culture.svg" />
+    </div>
+    <div class="trophy_status_parent">
+        <img class="trophy_status" src="/assets/images/trophy_locked.svg" />
+    </div>
+</div>
+    <div class="box locked">
+    <div class="box-inner">
+        <h3>Génie du<br />Siècle</h3>
+        <img class="trophy_icone" src="/assets/images/trophy_genie.svg" />
+    </div>
+    <div class="trophy_status_parent">
+        <img class="trophy_status" src="/assets/images/trophy_locked.svg" />
+    </div>
+</div>
+    <div class="box locked">
+    <div class="box-inner">
+        <h3>Maître<br />Yoga</h3>
+        <img class="trophy_icone" src="/assets/images/trophy_yoga.svg" />
+    </div>
+    <div class="trophy_status_parent">
+        <img class="trophy_status" src="/assets/images/trophy_locked.svg" />
+    </div>
+</div>
+    <div class="box locked">
+    <div class="box-inner">
+        <h3>Momification<br />Low Cost</h3>
+        <img class="trophy_icone" src="/assets/images/trophy_momification.svg" />
+    </div>
+    <div class="trophy_status_parent">
+        <img class="trophy_status" src="/assets/images/trophy_locked.svg" />
+    </div>
+</div>
+    <div class="box locked">
+    <div class="box-inner">
+        <h3>Polyglote à<br />Moitié</h3>
+        <img class="trophy_icone" src="/assets/images/trophy_polyglote.svg" />
+    </div>
+    <div class="trophy_status_parent">
+        <img class="trophy_status" src="/assets/images/trophy_locked.svg" />
     </div>
 </div>
 
 </div>    
      <!--INPUT POUR FORMULARO-->
- <div style="display: flex; justify-content: center;">
+<div class="test">
+  <p>
+  Tu as des tonnes d’idées en tête et tu souhaites nous les soumettre ?   
+  <span>
+    N’hésites pas à remplir ce formulaire !
+  </span>
+  </p>
+</div>
     <form action="" method="post">
       <div class="group">
-        <input class="input" name="firstname" type="text" placeholder="John" required>
+        <input class="input" name="firstname" type="text" placeholder="Renseigne ton prénom" required>
         <label>Prénom</label>
       </div>
       <div class="group">
-        <input class="input" name="lastname" type="text" placeholder="Doe" required>
+        <input class="input" name="lastname" type="text" placeholder="Renseigne ton nom" required>
         <label>Nom</label>
       </div>
       <div class="group">
-        <input class="input" name="email" type="email" placeholder="johndoe@example.com" required>
+        <input class="input" name="email" type="email" placeholder="Renseigne ton email" required>
         <label>Email</label>
       </div>
       <div class="group">
-        <input class="input" name="idea" type="text" placeholder="Pro de la blague" required>
+        <input class="input" name="idea" type="text" placeholder="Renseigne le nom de l'idée" required>
         <label>Nom de l'idée</label>
       </div>
       <div class="group">
-        <textarea class="input textarea" name="detail" placeholder="Détail ton idée..." required></textarea>
+        <textarea class="input textarea" style="padding: 20px;" name="detail" placeholder="Détail ton idée..." required></textarea>
         <label>Ton idée</label>
       </div>
-      <div class="group">
-        <button class="button-continue" type="submit">Je valide mon idée !</button>
-      </div>
+      <button class="button-continue group" style="margin-top: 0px;width: 80%; align-items: center;" type="submit">Je valide mon idée !</button>
     </form>
-  </div>
+
+    
 </div>    
         
 </main>
