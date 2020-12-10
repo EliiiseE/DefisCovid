@@ -173,9 +173,11 @@
     justify-content: space-between;
     align-items: center;
     padding: 0;
+    width: 100px;
 
     i {
       font-size: 40px;
+      color: $dark-orange;
       
     }
   }
@@ -215,11 +217,12 @@
   align-items: center;
   flex-direction: column;
   padding: 8px;
+  overflow: hidden;
   
   }
   
   .title_challenge{
-    font-size: 28px;
+    font-size: 25px;
     font-family: $font-roboto;
     font-weight: $weight-light;
     text-align: center;
@@ -228,7 +231,7 @@
       margin-top: 10px;
     }
       span{
-      font-size: 28px;
+      font-size: 25px;
       text-transform: uppercase;
       font-family: $font-roboto;
       font-weight: $weight-regular;
@@ -369,13 +372,13 @@
     } 
     
   .title_challenge{
-      font-size: 40px;
+      font-size: 38px;
       p {
         margin: 0;
         margin-top: 10px;
       }
         span{
-        font-size: 60px;
+        font-size: 38px;
       }
     }
   .arrow{
@@ -439,13 +442,13 @@
     width: 500px;
   } 
   .title_challenge{
-    font-size: 50px;
+    font-size: 55px;
     p {
       margin: 0;
       margin-top: 10px;
     }
       span{
-      font-size: 70px;
+      font-size: 55px;
     }
   }
   .arrow{
