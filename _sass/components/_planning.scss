@@ -127,7 +127,15 @@
   }
   
   /* SECTION LE PLANNING */
-  
+  .challenge_planning{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+  }
+
   .text_planning{
     display: flex;
     justify-content: center;
@@ -154,6 +162,24 @@
     }
     
   }
+
+.container_social{
+  margin-bottom: 60px;
+  }
+
+.container_links{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+
+    i {
+      font-size: 40px;
+      
+    }
+  }
+
   
   .error-planning{
     font-size: 20px;
@@ -170,7 +196,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 500px;
   }
+
+  .citation-and-agenda{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    }
   
   .challenge-container{
   border: 2px solid $yellow;
@@ -186,7 +219,7 @@
   }
   
   .title_challenge{
-    font-size: 32px;
+    font-size: 28px;
     font-family: $font-roboto;
     font-weight: $weight-light;
     text-align: center;
@@ -195,16 +228,11 @@
       margin-top: 10px;
     }
       span{
-      font-size: 32px;
+      font-size: 28px;
       text-transform: uppercase;
       font-family: $font-roboto;
       font-weight: $weight-regular;
     }
-  }
-
-  .citation-and-agenda{
-  display: flex;
-  flex-direction: column;
   }
   
   .agenda_arrow{
@@ -284,7 +312,7 @@
     font-family: $font-roboto;
     font-weight: $weight-regular;
       .day_text{
-      font-size: 18px;
+      font-size: 15px;
       font-family: $font-roboto;
       font-weight: $weight-light;
     }
@@ -294,7 +322,7 @@
         justify-content: center;
         align-items: center;
         height: 100%;
-        font-size: 42px;
+        font-size: 35px;
         width: 40px;
         height: 40px;
         border-radius: 50%;
@@ -336,12 +364,12 @@
     }
   .challenge-container{
       border: 5px solid $yellow;
-      height: 626px;
-      width: 626px;
+      height: 400px;
+      width: 400px;
     } 
     
   .title_challenge{
-      font-size: 60px;
+      font-size: 40px;
       p {
         margin: 0;
         margin-top: 10px;
@@ -370,7 +398,7 @@
       }
     }
     .citation{
-      font-size: 40px;
+      font-size: 30px;
     }
     
     .agenda {
@@ -380,6 +408,13 @@
         font-size: 30px;
       }
   }
+  .container_links{
+    width: 300px;
+     i {
+      font-size: 70px;
+    }
+  }
+
 }
 
 
@@ -400,11 +435,11 @@
   }
   .challenge-container{
     border: 8px solid $yellow;
-    height: 640px;
-    width: 640px;
+    height: 500px;
+    width: 500px;
   } 
   .title_challenge{
-    font-size: 70px;
+    font-size: 50px;
     p {
       margin: 0;
       margin-top: 10px;
@@ -432,7 +467,7 @@
   }
 
   .citation{
-    font-size: 55px;
+    font-size: 40px;
   }
   
   .agenda {
@@ -441,5 +476,15 @@
       .day_text{
       font-size: 35px;
     }
+}
+
+.container_social{
+  margin-bottom: 80px;
+}
+
+.container_links{
+  i {
+   font-size: 80px;
+ }
 }
 } 
