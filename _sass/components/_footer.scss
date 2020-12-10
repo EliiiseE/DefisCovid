@@ -4,6 +4,7 @@ footer {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    height: 402px;
 }
 
 .footer-nav {
@@ -21,4 +22,104 @@ footer {
     div{
         margin: 16px 20px 16px 20px;
     }
+
+    a{
+      text-decoration: none;
+      color: white;
+    }
 }
+
+.container{
+    display: flex;
+    flex-direction: row;
+    width: 375px;
+    justify-content: flex-start;
+    margin-top: 80px;
+    align-items: center;
+  }
+  
+  .defis-covid{
+    display: flex;
+    align-items: center;
+    width: 50%;
+    margin-left: 35px;
+  }
+  
+  .logo-social{
+    width: 50%;
+    margin-right: 35px;
+    margin-left: 35px;
+  
+  }
+
+  .logo-defi{
+      width: 128px;
+      height: 20px;
+  }
+
+  .logos{
+    display: flex;
+    flex-direction: row;
+    margin-top: 8px;
+
+    img {
+        margin: 0px 10px 24px 10px;
+        height: 24px;
+        width: 24px;}
+  }
+
+  .retrouvez-nous{
+      color: white;
+      font-family: "Montserrat", sans-serif;
+      font-style: normal;
+      font-size: 13px;
+      line-height: 15px;
+      font-weight: 300px;
+  }
+
+  .fin-footer{
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .copyright{
+    color: #D6D6D6;
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-size: 10px;
+    font-weight: lighter;
+    line-height: 12px;
+  }
+
+  .designed{
+    color: #D6D6D6;
+    font-family: "Montserrat", sans-serif;
+    font-size: 10px;
+    font-style: normal;
+    line-height: 12px;
+    font-weight: lighter;
+  }
+
+  .copyright { margin-block-end : 8px}
+
+  .designed { margin-block-start : 0px;}
+
+  .footer_climb {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    text-decoration: none;
+    .haut-arrow {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        img {
+            width: 20px;
+            height: auto;
+        }
+    }
+  }
