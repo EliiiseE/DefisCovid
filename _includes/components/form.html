@@ -7,6 +7,7 @@
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
     class="svg_form_desktop"
+    preserveAspectRatio="none"
   >
     <path
       fill-rule="evenodd"
@@ -16,18 +17,22 @@
     />
   </svg>
 
-  <svg
-    width="100vw"
+  <svg 
+    width="373"
+    height="71"
+    viewBox="0 0 373 71"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
     class="svg_form_mobile"
+    preserveAspectRatio="none"
   >
     <path
       d="M373 54.0345V0H0V64.1133C66.0939 55.6407 115.746 60.645 163.568 65.4649C191.947 68.3251 219.681 71.1204 249.824 70.996C319.539 70.7084 355.076 62.6658 373 54.0345Z"
       fill="#FCD34D"
     />
   </svg>
-  <img style="height: 56px" src="/assets/images/lightbulb.svg" alt="ampoule" />
+
+  <img class="bulb" src="/assets/images/lightbulb.svg" alt="ampoule" />
 </div>
 <h2 class="titre_form">Communique tes idées !</h2>
 <div style="display: flex; justify-content: center; width: 100vw">
@@ -39,61 +44,59 @@
   </p>
 </div>
 <form action="mailto:clement.renou@mmibordeaux.com" method="get">
-  <div class="group">
-    <input
-      class="input"
-      name="firstname"
-      type="text"
-      placeholder="Renseigne ton prénom"
-      required
-    />
-    <label>Prénom</label>
+  <div class="flex_form">
+    <div class="group">
+      <input
+        class="input"
+        name="firstname"
+        type="text"
+        placeholder="Renseigne ton prénom"
+        required
+      />
+      <label>Prénom</label>
+    </div>
+    <div class="group">
+      <input
+        class="input"
+        name="lastname"
+        type="text"
+        placeholder="Renseigne ton nom"
+        required
+      />
+      <label>Nom</label>
+    </div>
+    <div class="group">
+      <input
+        class="input"
+        name="email"
+        type="email"
+        placeholder="Renseigne ton email"
+        required
+      />
+      <label>Email</label>
+    </div>
+    <div class="group">
+      <input
+        class="input"
+        name="idea"
+        type="text"
+        placeholder="Renseigne le nom de l'idée"
+        required
+      />
+      <label>Nom de l'idée</label>
+    </div>
+    <div class="group">
+      <textarea
+        class="input textarea"
+        style="padding: 20px"
+        name="detail"
+        placeholder="Détail ton idée..."
+        required
+      ></textarea>
+      <label>Ton idée</label>
+    </div>
   </div>
-  <div class="group">
-    <input
-      class="input"
-      name="lastname"
-      type="text"
-      placeholder="Renseigne ton nom"
-      required
-    />
-    <label>Nom</label>
+  <div class="flex_button">
+    <button class="button-continue" type="submit">Je valide mon idée !</button>
   </div>
-  <div class="group">
-    <input
-      class="input"
-      name="email"
-      type="email"
-      placeholder="Renseigne ton email"
-      required
-    />
-    <label>Email</label>
-  </div>
-  <div class="group">
-    <input
-      class="input"
-      name="idea"
-      type="text"
-      placeholder="Renseigne le nom de l'idée"
-      required
-    />
-    <label>Nom de l'idée</label>
-  </div>
-  <div class="group">
-    <textarea
-      class="input textarea"
-      style="padding: 20px"
-      name="detail"
-      placeholder="Détail ton idée..."
-      required
-    ></textarea>
-    <label>Ton idée</label>
-  </div>
-  <button
-    class="button-continue group"
-    style="margin-top: 0px; width: 80%; align-items: center"
-    type="submit"
-  >
-    Je valide mon idée !
-  </button>
 </form>

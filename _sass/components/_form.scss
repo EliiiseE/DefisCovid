@@ -13,11 +13,14 @@
   background-color: $yellow;
   position: relative;
 }
+.bulb {
+  height: 3.5rem;
+}
 .titre_form {
   text-align: center;
   font-family: $font-roboto;
   font-weight: bold;
-  font-size: 28px;
+  font-size: 2em;
   margin-block-start: 0;
 }
 .textform {
@@ -105,6 +108,7 @@ label {
 .svg_form_desktop {
   position: absolute;
   width: 0vw;
+  bottom: -3rem;
 }
 
 @media screen and (min-width: 600px) {
@@ -114,6 +118,47 @@ label {
   .svg_form_desktop {
     width: 100vw;
     z-index: -1;
-    bottom: 0;
+    bottom: -9rem;
+  }
+  .formwrapper {
+    background-color: initial;
+    margin-top: 2rem;
+  }
+  .bulb {
+    height: 7rem;
+  }
+  .titre_form {
+    font-size: 3rem;
+  }
+  .textform {
+    font-size: 1.5rem;
+    width: 60vw;
+    text-align: center;
+  }
+  .flex_form {
+    display: flex;
+    width: 100vw;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .input {
+    width: 40vw;
+    height: 64px;
+  }
+  .textarea {
+    height: 56 * 3px;
+  }
+  label {
+    top: 0.9rem;
+    font-size: 30px;
+  }
+  .flex_button {
+    display: flex;
+    justify-content: center;
+  }
+  .group {
+    margin: 24px 64px 24px 64px;
   }
 }
