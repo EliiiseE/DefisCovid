@@ -1,0 +1,24 @@
+footer {
+    background-color:#191847;;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footer-nav {
+    display: flex;
+    flex-flow: row wrap;
+    font-size: 14px;
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    color: white;
+    width: 340px;
+    margin-left: 35px;
+    margin-right: 35px;
+    justify-content: flex-start;
+
+    div{
+        margin: 16px 20px 16px 20px;
+    }
+}
