@@ -1,3 +1,14 @@
+.wave_accueil {
+  position: absolute;
+  z-index: -1;
+  top: -50px;
+}
+.wave_accueil_desktop {
+  position: absolute;
+  z-index: -1;
+  width: 0;
+  top: 0;
+}
 .presentation {
   width: 100vw;
   display: flex;
@@ -131,21 +142,28 @@
 // }
 
 @media screen and (min-width: 1094px) {
-    .icone_accueil{
-        margin-top: 3vw;
-        width: 30vw;
-        height: 10vw;
-    }
+  .icone_accueil {
+    margin-top: 3vw;
+    width: 30vw;
+    height: 10vw;
+  }
+  .wave_accueil {
+    width: 0;
+  }
+  .wave_accueil_desktop {
+    width: 100vw;
+  }
   .presentation {
     flex-direction: column;
     align-items: flex-end;
     flex-wrap: wrap;
     padding: 0;
     position: relative;
+    margin-bottom: 10rem;
     .title {
       font-size: 50px;
       width: 50%;
-      padding: 0px;
+      padding-right: 2vw;
 
       h1 {
         font-weight: bold;
@@ -180,13 +198,14 @@
       width: 50%;
       font-family: $font-montserrat;
       font-size: 40px;
+      padding-right: 2vw;
     }
 
     .txt2 {
       width: 50%;
       font-family: $font-montserrat;
       font-size: 40px;
-      padding: 0px;
+      padding-right: 2vw;
     }
   }
 
