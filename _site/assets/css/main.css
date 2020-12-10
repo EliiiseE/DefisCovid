@@ -4,8 +4,6 @@ html, body { margin: 0; padding: 0; box-sizing: border-box; }
 
 body { background-color: #fffcf2; }
 
-* { box-sizing: border-box; }
-
 /*YUMMY COOKIE*/
 .popup_cookie { background-color: rgba(255, 252, 242, 0.8); display: flex; justify-content: space-around; align-items: center; flex-direction: column; width: 60%; height: 60%; padding: 20px; z-index: 1; }
 
@@ -65,25 +63,31 @@ li a { display: block; color: #FF604E; text-decoration: none; font-family: "Mont
 
 li a:hover { background-color: #FF604E; color: white; }
 
-.title { margin: 1em; font-family: "Roboto", sans-serif; }
+.presentation { width: 100%; display: flex; flex-direction: row; justify-content: stretch; flex-wrap: wrap; padding: 0 34px; }
 
-.title h1 { font-weight: bold; color: #191847; }
+.presentation .title { font-family: "Roboto", sans-serif; width: 100%; }
 
-.title h2 { color: #191847; }
+.presentation .title h1 { font-weight: bold; color: #191847; }
 
-.first_info { display: flex; justify-content: space-between; flex-direction: row; }
+.presentation .title h2 { color: #191847; }
 
-p { font-family: "Montserrat", sans-serif; color: #191847; }
+.presentation .girl { width: 50%; }
 
-.girl { width: 100%; }
+.presentation .girl img { object-fit: contain; width: 100%; height: 100%; }
 
-.logos { flex-direction: column; }
+.presentation .txt1 { width: 50%; font-family: "Montserrat", sans-serif; font-size: 18px; }
 
-.logos img { width: 15%; flex-direction: column; display: block; margin-left: auto; margin-right: auto; }
+.presentation .txt2 { width: 100%; font-family: "Montserrat", sans-serif; }
 
-.logos h3 { margin-left: auto; margin-right: auto; text-align: center; }
+.logos { flex-direction: column; display: flex; width: 100%; padding: 0 34px; }
 
-h3 { font-family: "Montserrat", sans-serif; color: #191847; font-weight: 400; }
+.logos .icon { display: flex; flex-direction: column; align-items: center; }
+
+.logos .icon img { width: 15%; display: block; }
+
+.logos .icon h3 { font-weight: 300; font-family: "Montserrat", sans-serif; }
+
+@media screen and (min-width: 1094px) { .presentation { flex-direction: column; align-items: flex-end; flex-wrap: wrap; padding: 0 34px; } .presentation .title { font-family: "Roboto", sans-serif; width: 50%; } .presentation .title h1 { font-weight: bold; color: #191847; } .presentation .title h2 { color: #191847; } .presentation .girl { width: 50%; order: -1; align-self: flex-start; } .presentation .girl img { object-fit: contain; width: 100%; height: 100%; } .presentation .txt1 { width: 50%; font-family: "Montserrat", sans-serif; font-size: 18px; } .presentation .txt2 { width: 50%; font-family: "Montserrat", sans-serif; } .logos { flex-direction: row; display: flex; width: 100%; padding: 0 34px; } .logos .icon img { width: 35%; } }
 
 .logos .test { position: relative; background: url("../../assets/images/confetti.png") no-repeat center; background-size: 160px 160px; width: 300px; height: 300px; margin: auto; }
 
@@ -270,7 +274,11 @@ button { outline: none; }
 
 .group * { box-sizing: border-box; }
 
-.test { font-family: "Montserrat", sans-serif; font-style: normal; font-weight: normal; font-size: 18px; }
+.formwrapper { display: flex; width: 100vw; flex-direction: column; background-color: #fcd34d; position: relative; }
+
+.titre_form { text-align: center; font-family: "Roboto", sans-serif; font-weight: bold; font-size: 28px; margin-block-start: 0; }
+
+.textform { font-family: "Montserrat", sans-serif; font-style: normal; font-weight: normal; font-size: 18px; width: 80vw; margin-bottom: 0; }
 
 .input { font-family: "Montserrat", sans-serif; font-weight: 500; font-style: italic; color: #d6d6d6; font-size: 14px; padding-left: 20px; display: block; width: 80vw; height: 48px; border: 1px solid #999; border-radius: 8px; background-color: #fffcf2; }
 

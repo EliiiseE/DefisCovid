@@ -1,63 +1,131 @@
-.title {
-    margin: 1em;
-    font-family: $font-roboto;
-}
-
-.title h1{
-    font-weight: bold;
-    color: $black;
-}
-
-.title h2{
-    color: $black;
-}
-
-.first_info {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-}
-
-p{
-    font-family: $font-montserrat;
-    color: $black;
-}
-
-.girl {
+.presentation{
     width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+    flex-wrap: wrap;
+    padding: 0 34px;
+
+    .title {
+        font-family: $font-roboto;
+        width: 100%;
+
+        h1{
+            font-weight: bold;
+            color: $black;
+        }
+
+        h2{
+            color: $black;
+        }
+    }
+
+    .girl{
+        width: 50%;
+        
+
+        img{
+            object-fit: contain;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .txt1{
+        width: 50%;
+        font-family: $font-montserrat;
+        font-size: 18px;
+    }
+
+    .txt2{
+        width: 100%;
+        font-family: $font-montserrat;
+    }
 }
 
 .logos {
     flex-direction: column;
-    // display: block;
-    // margin-left: auto;
-    // margin-right: auto;
-    // height: 100vh;
-    
+    display: flex;
+    width: 100%;
+    padding: 0 34px;
+
+    .icon{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        img {
+            width: 15%;
+            display: block;
+        }
+
+        h3 {
+            font-weight: $weight-light;
+            font-family: $font-montserrat;
+        }
+    }
 }
 
-.logos {
-
-    img {
-        width: 15%;
+@media screen and (min-width: 1094px) {
+    .presentation{
         flex-direction: column;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
+        align-items: flex-end;
+        flex-wrap: wrap;
+        padding: 0 34px;
+    
+        .title {
+            font-family: $font-roboto;
+            width: 50%;
+    
+            h1{
+                font-weight: bold;
+                color: $black;
+            }
+    
+            h2{
+                color: $black;
+            }
+        }
+    
+        .girl{
+            width: 50%;
+            order: -1;
+            align-self: flex-start;
+            
+    
+            img{
+                object-fit: contain;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    
+        .txt1{
+            width: 50%;
+            font-family: $font-montserrat;
+            font-size: 18px;
+        }
+    
+        .txt2{
+            width: 50%;
+            font-family: $font-montserrat;
+        }
     }
 
-}
+    .logos {
+        flex-direction: row;
+        display: flex;
+        width: 100%;
+        padding: 0 34px;
 
-.logos h3 {
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-}
-
-h3{
-    font-family: $font-montserrat;
-    color: $black;
-    font-weight: 400;
+        .icon{
+            img {
+                width: 35%;
+            }
+    
+        }
+    
+    }
 }
 
 // Test pour mettre le fond
@@ -69,18 +137,19 @@ h3{
     width: 300px;
     height: 300px;
     margin: auto;
-    span{
-        content: "";
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-35%, -20%);
-        background: rgba(252, 211, 77, 0.52);
-        clip-path: url("#clipIcon");
-        width: 100%;
-        height: 100%;
-        z-index: -1;
+        span{
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-35%, -20%);
+            background: rgba(252, 211, 77, 0.52);
+            clip-path: url("#clipIcon");
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
     }
 }
-}
 // Test pour mettre le fond
+

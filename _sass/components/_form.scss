@@ -1,75 +1,94 @@
 /*.input POUR FORMULAIRE*/
-  
-.group 			  { 
-    position:relative; 
-    margin:32px; 
-    * {
-      box-sizing: border-box;
-    }
+.group {
+  position: relative;
+  margin: 32px;
+  * {
+    box-sizing: border-box;
   }
-  .test {
+}
+.formwrapper {
+  display: flex;
+  width: 100vw;
+  flex-direction: column;
+  background-color: $yellow;
+  position: relative;
+}
+.titre_form {
+  text-align: center;
+  font-family: $font-roboto;
+  font-weight: bold;
+  font-size: 28px;
+  margin-block-start: 0;
+}
+.textform {
   font-family: $font-montserrat;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
-  }
-  
-.input 				{
+  width: 80vw;
+  margin-bottom: 0;
+}
+
+.input {
   font-family: $font-montserrat;
   font-weight: 500;
   font-style: italic;
   color: $grey;
-  font-size:14px;
-  padding-left:20px ;
-  display:block;
+  font-size: 14px;
+  padding-left: 20px;
+  display: block;
   width: 80vw;
   height: 48px;
-  border:1px solid #999;
+  border: 1px solid #999;
   border-radius: 8px;
-  background-color: $beige
+  background-color: $beige;
 }
 
-.input:focus 		{ outline:none; }
+.input:focus {
+  outline: none;
+}
 
-
-label 				 {
+label {
   font-family: $font-montserrat;
-  color:#999; 
+  color: #999;
   background: none;
-  font-size:20px;
-  font-weight:500;
-  position:absolute;
-  pointer-events:none;
-  left:16px;
-  top:12px;
-  padding: 0 4px ;
-  transition:0.2s ease all; 
-  -moz-transition:0.2s ease all; 
-  -webkit-transition:0.2s ease all;
+  font-size: 20px;
+  font-weight: 500;
+  position: absolute;
+  pointer-events: none;
+  left: 16px;
+  top: 12px;
+  padding: 0 4px;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
 }
 
 /* active state */
-.input:focus ~ label, .input:valid ~ label 		{
-  top:-12px;
+.input:focus ~ label,
+.input:valid ~ label {
+  top: -12px;
   font-size: 18px;
   font-weight: 600;
-  color:$dark-orange;
-  background:$beige;
+  color: $dark-orange;
+  background: $beige;
 }
 
-.input:focus, .input:valid{
-  top:-10px;
+.input:focus,
+.input:valid {
+  top: -10px;
   color: $black;
-  border:1px solid $dark-orange;
+  border: 1px solid $dark-orange;
 }
 
 .input::placeholder {
-      color: #999;
-      opacity: 0;
+  color: #999;
+  opacity: 0;
   transition: 0.2s ease;
-      }
+}
 
-.input:focus::placeholder, .input:valid::placeholder{
+.input:focus::placeholder,
+.input:valid::placeholder {
   opacity: 1;
 }
 
