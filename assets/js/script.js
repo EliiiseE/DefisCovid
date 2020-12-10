@@ -1,4 +1,4 @@
-// Liste des défis - 14 minimum pour tenir une semaine si on choisit que une préférence
+// Liste des défis - 14 minimum pour tenir une semaine si on choisit qu'une préférence
 const tvChallenge = ['tv1', 'tv2', 'tv3', 'tv4', 'tv5', 'tv6', 'tv7', 'tv8', 'tv9', 'tv10', 'tv11', 'tv12', 'tv13', 'tv14']
 const mobileChallenge = ['mobile1', 'mobile2', 'mobile3', 'mobile4', 'mobile5', 'mobile6', 'mobile7', 'mobile8', 'mobile9', 'mobile10', 'mobile11', 'mobile12', 'mobile13', 'mobile14']
 const extraordinaryChallenge = ['extraordinary1', 'extraordinary2', 'extraordinary3', 'extraordinary4', 'extraordinary5', 'extraordinary6', 'extraordinary7', 'extraordinary8', 'extraordinary9', 'extraordinary10', 'extraordinary11', 'extraordinary12', 'extraordinary13', 'extraordinary14']
@@ -21,7 +21,15 @@ const days = ['D', 'L', 'M', 'M', 'J', 'V', 'S']
 let userPreferencesChallenge = []
 // La variable est enregistré dans un localStorage pour garder en mémoire le planning
 let userPlanning = []
+let userPlanningDays = []
 const durationPlanning = 14
+
+// La variable pour modifier le texte
+const textChallenge = $('#title_challenge')
+
+// Les variables du slider
+let slideMove = 0
+const amount = 70
 
 // Permet de garder lors du clique le bouton activé
 $('.button-preferences').click(function() {
@@ -75,26 +83,43 @@ const generatePlanning = () => {
     // Garde en mémoire le planning
     localStorage.setItem("planning", JSON.stringify(userPlanning))
 
+    // Crée un tableau avec les 14 jours à partir d'aujourd'hui pour garder en mémoire le début du planning
+    userPlanningDays = [] // Reset la variable
+    const actualDay = new Date()
+    const nextDay = new Date(actualDay)
+    for(let i = 0; i < userPlanning.length; i++) {
+      nextDay.setDate(actualDay.getDate() + i)
+      userPlanningDays.push([nextDay.getDay(), nextDay.getDate()])
+    }
+    // Garde en mémoire les jours
+    localStorage.setItem("days", JSON.stringify(userPlanningDays))
+
     $('.loading-planning').fadeOut()
 
     // Affiche le planning
-    displayPlanning(userPlanning)
+    displayPlanning()
   }
 }
 
 // Fonction pour afficher le planning générer aléatoirement
-const displayPlanning = (planning) => {
+const displayPlanning = () => {
   // Affiche l'ancien agenda si on en génère un nouveau
   $('.agenda').children("li").remove()
-
-  // Permet d'avoir les 14 jours à partir du jour de création du planning
-  const actualDay = new Date()
-  const nextDay = new Date(actualDay)
-
-  for(let i = 0; i < planning.length; i++) {
-    nextDay.setDate(actualDay.getDate() + i)
-    $('.agenda').append(`<li><span class="day_text">${days[nextDay.getDay()]}</span><span class="day_number">${nextDay.getDate()}</span></li>`)
+  const today = new Date()
+  for(let i = 0; i < userPlanning.length; i++) {
+    // Met le jour actuel en surlignement
+    $('.agenda').append(`<li><span class="day_text">${days[userPlanningDays[i][0]]}</span><span class="day_number ${today.getDate() == userPlanningDays[i][1] ? 'active' : ''}">${userPlanningDays[i][1]}</span></li>`)
   }
+  
+  // Affiche le bon challenge
+  displayChallenge()
+      
+  // Permet de cliquer sur les nombre du planning - à mettre ici pour prendre en compte la création de l'élément
+  $('.day_number').click(function() {
+    $('.day_number').removeClass('active')
+    $(this).addClass('active')
+    displayChallenge()
+  })
 }
 
 // Fonction pour avoir un nombre aléatoire dans un intervalle fermé
@@ -107,18 +132,44 @@ const getRandom = (min, max) => {
 // Fonction pour charger le planning de l'utilisateur si il l'a déjà généré
 $(document).ready(function() {
   const userPlanningLoaded = JSON.parse(localStorage.getItem("planning"))
-  if(userPlanningLoaded) {
-    displayPlanning(userPlanningLoaded)
+  const userPlanningDaysLoaded = JSON.parse(localStorage.getItem("days"))
+  if(userPlanningLoaded && userPlanningDaysLoaded) {
+    userPlanning = userPlanningLoaded
+    userPlanningDays = userPlanningDaysLoaded
+    displayPlanning()
   }
 })
 
 // Permet de cliquer sur les flèches du planning
 $('.arrow').click(function() {
   const agenda = $('.agenda li')
-  const offset = agenda.offset()
   if($(this).data('direction') == 'left') {
-    agenda.css('transform', `translateX(${offset.left + 20}px)`)
+    slideMove += amount
   } else if($(this).data('direction') == 'right') {
-    agenda.css('transform', `translateX(${offset.left - 20}px)`)
+    slideMove -= amount
   }
+  agenda.css('transform', `translateX(${slideMove}px)`)
+  
+  // Met à jour le slider en même temps
+  $('#myRange').val(-slideMove/amount)
+})
+
+// Fonction pour changer le texte du challenge
+const displayChallenge = () => {
+  const days = $('.day_number')
+  const day = $('.day_number.active')
+  const indexOfChallenge = days.index(day[0])
+  
+  textChallenge.html(userPlanning[indexOfChallenge])
+}
+
+// Fonction pour changer écouter les changements du slider
+$(document).on('input', '#myRange', function() {
+  const value = $(this).val()
+  const agenda = $('.agenda li')
+
+  // Pour garder la cohérence si on utilise les flèches après
+  slideMove = amount * value
+  agenda.css('transform', `translateX(-${slideMove}px)`)
+  slideMove = -slideMove
 })

@@ -1,8 +1,10 @@
 /*.input POUR FORMULAIRE*/
-
 .group {
   position: relative;
   margin: 32px;
+  * {
+    box-sizing: border-box;
+  }
 }
 .formwrapper {
   display: flex;

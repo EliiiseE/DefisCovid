@@ -1,4 +1,4 @@
-<div class="preferences">
+<div class="preferences" id="preferences">
     <div class="text_preferences">
         <div class="title_preferences">
             <p>Choisis tes préférences ici ! </p>
@@ -17,7 +17,7 @@
     </div>
     <div class="generate-planning">
         <div class="button-continue-container">
-            <button class="button-continue" onclick="generatePlanning()">Générer mon planning</button>
+            <a href="#planning" class="js-scrollTo"><button class="button-continue" onclick="generatePlanning()">Générer mon planning</button></a>
         </div>
         <p class="error-planning" style="display: none;">Afin de générer votre planning, vous devez choisir des
             préférences 😉</p>
