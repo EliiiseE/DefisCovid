@@ -3,20 +3,22 @@
 }
 
 
-nav {
+#nav {
     margin: 0 auto;
-    width: 100%;
+    width: 100vw;
     top: 0px;
     position: fixed ;
+    
 }
 
 nav ul{
     list-style-type: none;
+    
 }
 
 nav li{
     float: right;
-    width: 20%;
+    // width: 20%;
     text-align: center;
 }
 
@@ -31,7 +33,7 @@ nav ul::after{
 }
 
 .liennav {
-    color: #FF604E;
+    color:$dark-orange;
     text-decoration: none;
     font-family: $font-montserrat;
     font-weight: $weight-medium;
@@ -40,34 +42,38 @@ nav ul::after{
 }
 
 .liennav:hover {
-    background-color: #FF604E;
+    background-color:$dark-orange;
     color: white;
-    border: 2px solid #F0CE55;
+    border: 2px solid $yellow-hover;
 }
 
 @media (max-width: 600px) {
-    .position{
-        display: flex;
-        place-content: end;
-        justify-content: space-between;
-    }
-    
-    
-    nav {
+    nav{position: fixed;;
+    bottom : 0;
+   
+}
+#nav {
+    width: 100vw;
         margin: 0 auto;
-        width: 100%;
-        top: 0px;
         position: sticky ;
+        //height: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: space-evenly;
     }
     
     nav ul{
         list-style-type: none;
+        // display: flex;
+        place-content: end;
+        // justify-content: space-between;
+        padding-inline-start: 0;
     }
     
     nav li{
         float: center;
-        width: 20%;
         text-align: center;
+        // width: 0;
     }
     
     nav a{
@@ -81,21 +87,28 @@ nav ul::after{
     }
     
     .liennav{
-        color: #FF604E;
+        color: $dark-orange;
         text-decoration: none;
         font-family: $font-montserrat;
         font-weight: $weight-medium;
-        font-size: 15px;
-        padding: 15px 15px 15px 15px;
+        font-size: 10px;
+        padding: 0; 
     }
     
     .liennav:hover {
-        background-color: #FF604E;
+        background-color: $dark-orange;
         color: white;
-        border: 2px solid #F0CE55;
+        border: 2px solid $yellow-hover;
     }
     
-   .images{
-    max-width: 100%;
-   } 
+    .images{
+     max-width: 22px;
+    } 
+
+   .liste{
+    display: flex;   
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   }
 }
