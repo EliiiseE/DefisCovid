@@ -24,6 +24,10 @@ html, body {
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: $beige;
 }
