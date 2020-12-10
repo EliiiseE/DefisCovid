@@ -1,14 +1,14 @@
 .presentation{
-    width: 100%;
+    width: 100vw;
     display: flex;
     flex-direction: row;
     justify-content: stretch;
     flex-wrap: wrap;
-    padding: 0 34px;
 
     .title {
         font-family: $font-roboto;
         width: 100%;
+        padding: 0 34px;
 
         h1{
             font-weight: bold;
@@ -39,12 +39,15 @@
         width: 50%;
         font-family: $font-montserrat;
         font-size: 18px;
+        color: $black;
     }
 
     .txt2{
         width: 100%;
         font-family: $font-montserrat;
         font-size: 18px;
+        padding: 0 10px;
+        color: $black;
     }
 }
 
@@ -52,7 +55,6 @@
     flex-direction: column;
     display: flex;
     width: 100%;
-    padding: 0 34px;
 
     .icon{
         display: flex;
@@ -60,13 +62,15 @@
         align-items: center;
 
         img {
-            width: 15%;
+            width: 25%;
             display: block;
         }
 
         h3 {
-            font-weight: $weight-light;
+            $weight-light: 300;
             font-family: $font-montserrat;
+            color: $black;
+            font-size: 24px;
         }
     }
 }
@@ -76,8 +80,9 @@
         flex-direction: column;
         align-items: flex-end;
         flex-wrap: wrap;
-        padding: 0 34px;
-    
+        padding: 0;
+        position: relative;
+        width: calc(100% - 50px);
         .title {
             font-family: $font-roboto;
             width: 50%;
@@ -100,8 +105,10 @@
             width: 50%;
             order: -1;
             align-self: flex-start;
-            
-    
+            position: absolute;
+            height: 100%;
+            left: 0;
+            top: 0;
             img{
                 object-fit: contain;
                 width: 100%;
@@ -126,11 +133,14 @@
         flex-direction: row;
         display: flex;
         width: 100%;
-        padding: 0 34px;
 
         .icon{
             img {
                 width: 35%;
+            }
+
+            h3{
+                font-size: 36px;
             }
     
         }
@@ -139,27 +149,27 @@
 }
 
 // Test pour mettre le fond
-.logos {
-    .test {
-    position: relative;
-    background: url('../../assets/images/confetti.png') no-repeat center;
-    background-size: 160px 160px;
-    width: 300px;
-    height: 300px;
-    margin: auto;
-        span{
-            content: "";
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-35%, -20%);
-            background: rgba(252, 211, 77, 0.52);
-            clip-path: url("#clipIcon");
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-        }
-    }
-}
+// .logos {
+//     .test {
+//     position: relative;
+//     background: url('../../assets/images/confetti.png') no-repeat center;
+//     background-size: 160px 160px;
+//     width: 300px;
+//     height: 300px;
+//     margin: auto;
+//         span{
+//             content: "";
+//             position: absolute;
+//             top: 50%;
+//             left: 50%;
+//             transform: translate(-35%, -20%);
+//             background: rgba(252, 211, 77, 0.52);
+//             clip-path: url("#clipIcon");
+//             width: 100%;
+//             height: 100%;
+//             z-index: -1;
+//         }
+//     }
+// }
 // Test pour mettre le fond
 
