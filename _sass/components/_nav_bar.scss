@@ -30,7 +30,7 @@ nav ul::after{
     clear: both;
 }
 
-li a {
+.liennav {
     color: #FF604E;
     text-decoration: none;
     font-family: $font-montserrat;
@@ -39,7 +39,7 @@ li a {
     padding: 15px 15px 15px 15px;
 }
 
-li a:hover {
+.liennav:hover {
     background-color: #FF604E;
     color: white;
     border: 2px solid #F0CE55;
@@ -80,19 +80,22 @@ li a:hover {
         clear: both;
     }
     
-    li a {
+    .liennav{
         color: #FF604E;
         text-decoration: none;
         font-family: $font-montserrat;
         font-weight: $weight-medium;
-        font-size: 10px;
+        font-size: 15px;
         padding: 15px 15px 15px 15px;
     }
     
-    li a:hover {
+    .liennav:hover {
         background-color: #FF604E;
         color: white;
         border: 2px solid #F0CE55;
     }
     
+   .images{
+    max-width: 100%;
+   } 
 }
