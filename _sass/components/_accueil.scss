@@ -4,6 +4,7 @@
     flex-direction: row;
     justify-content: stretch;
     flex-wrap: wrap;
+    margin-bottom: 3rem;
 
     .title {
         font-family: $font-roboto;
@@ -11,13 +12,14 @@
         padding: 0 34px;
 
         h1{
-            font-weight: bold;
+            font-weight: $weight-bold;
             color: $black;
             font-size: 32px;
             margin: 0;
         }
 
         h2{
+            font-weight: $weight-regular;
             color: $black;
             font-size: 32px;
             margin: 0;
@@ -40,6 +42,9 @@
         font-family: $font-montserrat;
         font-size: 18px;
         color: $black;
+        span{
+            font-weight: $weight-bold; 
+        }
     }
 
     .txt2{
@@ -48,6 +53,9 @@
         font-size: 18px;
         padding: 0 10px;
         color: $black;
+        span{
+            font-weight: $weight-bold; 
+        }
     }
 }
 
@@ -67,13 +75,57 @@
         }
 
         h3 {
-            $weight-light: 300;
+            font-weight: $weight-regular;
             font-family: $font-montserrat;
             color: $black;
             font-size: 24px;
+            margin-top: -50px;
         }
     }
 }
+
+
+.logos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    .image {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: auto;
+        span{
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-35%, -20%);
+            background: rgba(252, 211, 77, 0.52);
+            clip-path: url("#clipIcon");
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+    }
+
+    .fun {
+      background: url('../../assets/images/confetti.png') no-repeat center;
+      background-size: 101px 110px;
+    }
+
+    .mission {
+        background: url('../../assets/images/mission.png') no-repeat center;
+        background-size: 101px 110px;
+      }
+
+    .fusee {
+    background: url('../../assets/images/rocket.png') no-repeat center;
+        background-size: 101px 110px;
+    }
+}
+
 
 @media screen and (min-width: 1094px) {
     .presentation{
@@ -82,10 +134,10 @@
         flex-wrap: wrap;
         padding: 0;
         position: relative;
-        width: calc(100% - 50px);
         .title {
-            font-family: $font-roboto;
+            font-size: 50px;
             width: 50%;
+            padding: 0px;
     
             h1{
                 font-weight: bold;
@@ -126,6 +178,7 @@
             width: 50%;
             font-family: $font-montserrat;
             font-size: 40px;
+            padding: 0px;
         }
     }
 
@@ -148,28 +201,4 @@
     }
 }
 
-// Test pour mettre le fond
-// .logos {
-//     .test {
-//     position: relative;
-//     background: url('../../assets/images/confetti.png') no-repeat center;
-//     background-size: 160px 160px;
-//     width: 300px;
-//     height: 300px;
-//     margin: auto;
-//         span{
-//             content: "";
-//             position: absolute;
-//             top: 50%;
-//             left: 50%;
-//             transform: translate(-35%, -20%);
-//             background: rgba(252, 211, 77, 0.52);
-//             clip-path: url("#clipIcon");
-//             width: 100%;
-//             height: 100%;
-//             z-index: -1;
-//         }
-//     }
-// }
-// Test pour mettre le fond
 

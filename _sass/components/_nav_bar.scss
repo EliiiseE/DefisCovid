@@ -48,8 +48,11 @@
 // }
 
 @media (max-width: 600px) {
-    nav{position: fixed;
+    nav{position: fixed ;
     bottom : 0;
+    background-color: rgba($beige, 1);
+    border: 2px solid rgba(#656565,0.2);
+    padding-top: 5px;
  }
 #nav {
         width: 100vw;
@@ -91,18 +94,17 @@
         text-decoration: none;
         font-family: $font-montserrat;
         font-weight: $weight-medium;
-        font-size: 10px;
+        font-size: 15px;
         padding: 0; 
     }
     
     .liennav:hover {
         background-color: $dark-orange;
         color: white;
-        border: 2px solid $yellow-hover;
     }
     
     .images{
-     max-height: 22px;
+     max-height: 28px;
     } 
 
    .liste{
@@ -110,4 +112,5 @@
     flex-direction: column;
     align-items: center;
    }
+
 }
