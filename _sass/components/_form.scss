@@ -96,7 +96,24 @@ label {
   height: 200px;
   resize: vertical;
 }
+.svg_form_mobile {
+  position: absolute;
+  z-index: -1;
+  top: 45px;
+  width: 100vw;
+}
+.svg_form_desktop {
+  position: absolute;
+  width: 0vw;
+}
 
-@media screen and (min-width : 600px){
-  
+@media screen and (min-width: 600px) {
+  .svg_form_mobile {
+    width: 0;
+  }
+  .svg_form_desktop {
+    width: 100vw;
+    z-index: -1;
+    bottom: 0;
+  }
 }
