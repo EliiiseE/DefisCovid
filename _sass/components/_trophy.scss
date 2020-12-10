@@ -147,6 +147,19 @@
                 color: #FFFFFF;
 
                 text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+                &.trophy_3lines {
+                    @media (max-width: 600px) {
+                        font-size: 9px;
+                        line-height: 11px;
+                    }
+                }
+                &.trophy_move_right {
+                    @media (max-width: 600px) {
+                        position: relative;
+                        right: 190px;
+                    }
+                }
             }
         }
     }
