@@ -1,26 +1,36 @@
-
-#nav {
-    padding: 0;
-    margin: 0;
-    text-align: center;
-    width: 1439px;
-    height: 85; 
+.position{
+    place-content: end;
 }
 
-#nav li{
-    display: inline;
-    list-style: none;
+
+nav {
+    margin: 0 auto;
+    width: 100%;
+    top: 0px;
+    position: fixed ;
+}
+
+nav ul{
     list-style-type: none;
 }
 
-#nav a{
-    display: inline-block;
-    margin: 0 30px;
+nav li{
+    float: right;
+    width: 20%;
+    text-align: center;
 }
 
-
-li a {
+nav a{
     display: block;
+}
+
+nav ul::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.liennav {
     color: #FF604E;
     text-decoration: none;
     font-family: $font-montserrat;
@@ -29,8 +39,63 @@ li a {
     padding: 15px 15px 15px 15px;
 }
 
-li a:hover {
+.liennav:hover {
     background-color: #FF604E;
     color: white;
+    border: 2px solid #F0CE55;
 }
 
+@media (max-width: 600px) {
+    .position{
+        display: flex;
+        place-content: end;
+        justify-content: space-between;
+    }
+    
+    
+    nav {
+        margin: 0 auto;
+        width: 100%;
+        top: 0px;
+        position: sticky ;
+    }
+    
+    nav ul{
+        list-style-type: none;
+    }
+    
+    nav li{
+        float: center;
+        width: 20%;
+        text-align: center;
+    }
+    
+    nav a{
+        display: block;
+    }
+    
+    nav ul::after{
+        content: "";
+        display: table;
+        clear: both;
+    }
+    
+    .liennav{
+        color: #FF604E;
+        text-decoration: none;
+        font-family: $font-montserrat;
+        font-weight: $weight-medium;
+        font-size: 15px;
+        padding: 15px 15px 15px 15px;
+    }
+    
+    .liennav:hover {
+        background-color: #FF604E;
+        color: white;
+        border: 2px solid #F0CE55;
+    }
+    
+   .images{
+    max-width: 100%;
+   } 
+}
