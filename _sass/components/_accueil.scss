@@ -1,7 +1,7 @@
 .wave_accueil {
   position: absolute;
   z-index: -1;
-  top: -50px;
+  top: -30px;
 }
 .wave_accueil_desktop {
   position: absolute;
@@ -20,6 +20,7 @@
 
   @media (max-width: 760px) {
     margin-top: 0;
+    padding-top: 1rem;
   }
 
   .title {
