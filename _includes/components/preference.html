@@ -17,7 +17,9 @@
     </div>
     <div class="generate-planning">
         <div class="button-continue-container">
-            <a href="#planning" class="js-scrollTo"><button class="button-continue" onclick="generatePlanning()">Générer mon planning</button></a>
+            <form action="#planning">
+                <button type="submit" class="button-continue js-scrollTo" onclick="generatePlanning()">Générer mon planning</button>
+            </form>
         </div>
         <p class="error-planning" style="display: none;">Afin de générer votre planning, vous devez choisir des
             préférences 😉</p>
