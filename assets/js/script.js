@@ -28,22 +28,81 @@ const dataListToChallenge = [
   ['cook', cookChallenge]
 ]
 
+// Liste des icons pour le planning
+const dataIconList = [
+  'tv.svg',
+  'mobile.svg',
+  'extraordinary.svg',
+  'travel.svg',
+  'cake.svg'
+]
+const iconChallenge = $('.icon_challenge')
+
+// Liste des trophées dans l'ordre des défis - code pas très propre mais c'était plus simple après y avoir déjà fait le reste (fonction implémenté à la toute fin)
+const tvTrophy = ['Chasseur de<br />Fantômes', 'Créateur de<br />Dinosaures', 'Grand<br >Aventurier', 
+'Ohé<br />Moussaillon', 'Chevalier<br />Jedi', 'Victime de la<br />Tentation',
+ 'Pote à la<br />Compote', 'Sorcier de<br />Poudlard', 'Maître de<br />L\'évasion', 'Super Héros', 
+'Être cultivé', 'Oh pinaise', 'Chasseur de<br />Mythes', 'L\'esprit de<br />Noël']
+
+const mobileTrophy = ['Acheteur<br />Compulsif', 'Fin stratège', 'Dresseur<br />Pokémon',
+ 'Fou à lier', 'Architecte<br />Diplômé', 'Maître des<br />Formes', 'Glouton', 'Le deck<br />Ultime', 
+ 'Souplesse<br />Incarnée', 'Joueur du<br />Dimanche', 'TNettoyage', ' Neurones<br />d\'acier', 'Prof de<br />Français', 'Rue de la <br />paix']
+
+const extraordinaryTrophy = ['Beauté<br />Commestible', 'Cosplay<br />Low Cost', 'Maniaque du<br />Rangement', ' Souvenirs<br />Ordonnés', 
+'Maître de la<br />Plume', 'Avoir la<br />Classe', 'Rigoureux', 
+'Vêtements<br />Oubliés', 'Décorateur de<br />Talent', 'Coup de<br />Crayon', 'Pâtissier', 'Ouverture<br />D\'esprit', 'Bob le<br />Bricoleur', 'Agent<br />Secret']
+
+const travelTrophy = ['Poète dans<br />Lâme', 'Guide<br />Touristique', 'Polyglote<br />Débutant', 'Voix divine', 'Géographe', 'Viking', 
+'Paix<br />Intérieure', 'Caligraphe', 'The Hu fan',
+ 'Explorateur', 'Korean style', 'Japanese style ', 'Alcoolique<br />Cultivé', ' Meilleur que<br />Christophe<br />Colomb']
+
+const cookTrophy = ['Master Cake', 'Sang Breton', 'Goût de la<br />Nature', 'Rat aux<br />Commandes', 'Presque un<br />Vrai steak', 'Garfield Vegan', 
+'Mille couleurs<br />En sucre', 'Avant la<br />Découverte<br />Du feu ', 'Pâtissier<br />Sous pression', 'Vegganisme', 'Diabète', 'Fort en<br />Chocolat', 'C bon', 'Cuisine de<br />Mamie']
+
+// Liste pour mettre en relation tous les trophées - plus simple pour la suite
+const dataTrophy = [
+  tvTrophy,
+  mobileTrophy,
+  extraordinaryTrophy,
+  travelTrophy,
+  cookTrophy
+]
+
+// Tableau des citations
+const citation = ['Les infusion de thyms, de fleurs de sureau, de sauge, et/ou de gingembre permet de calmer ton rhum',
+'Boire du bouillon de poule permet d\'agir comme anti- inflammatoire',
+'Fais des inhalations avec un grand bol d\'eau chaude et une serviette sur ta tête !',
+'Les huiles essentielle et surtout celle de menthe poivrée permet de calmer ton rhume',
+'Pas glamour mais utile ! Les gousses d’ail permettent de décongestionner le nez',
+'Le jus de tomates permet de calmer le nez et la gorge !',
+'Bois un verre d\'eau chaude avec du vinaigre de cidre et du miel. Cela permettra de décongestionner ton nez !',
+'Prendre un bain chaud avec du bicarbonate de sodium te permet de diminuer tes courbatures',
+'La badiane est excellente dans des salades de fruits et en plus cela contre les troubles digestifs !',
+'Prendre un bon bain chaud 5 avec de la camomille permet de réduire tes courbatures !',
+'L\'infusion de cannelle est très efficace contre le rhume et encore plus associer a du miel et citron',
+'Ajoute trois gouttes d\'huile essentielle d\'eucalyptus dans un bol d\'eau très chaude et respire la vapeur et tu respireras de nouveau !',
+'Mets toi des poches de glace contre ta tête si tu as mal',
+'Un bon jus de carotte  permet de booster ton organisme  et lutter contre la fatigue !']
+
 // Commence à Dimanche car c'est en anglais pour le Date.getDay()
 const days = ['D', 'L', 'M', 'M', 'J', 'V', 'S']
 
 // Les variables global
 let userPreferencesChallenge = []
+let userPreferencesChallengeIcon = []
+let userPreferencesTrophy = []
 // La variable est enregistré dans un localStorage pour garder en mémoire le planning
 let userPlanning = []
+let userPlanningIcon = []
 let userPlanningDays = []
+let userTrophy = []
+let userTrophyLocked = []
 const durationPlanning = 14
 
 // La variable pour modifier le texte
 const textChallenge = $('#title_challenge')
-
-// Les variables du slider
-let slideMove = 0
-const amount = 70
+const textCitation = $('.citation')
+const trophy = $('.trophy.boxes')
 
 // Permet de garder lors du clique le bouton activé
 $('.button-preferences').click(function() {
@@ -72,15 +131,19 @@ const generatePlanning = () => {
     $('.error-planning').show()
   } else {
     $('.error-planning').hide()
-    $('.loading-planning').fadeIn()
+    //$('.loading-planning').fadeIn()
 
     // Ajouter chaque tableau de défis à un autre tableau, pour tous les avoir dans le même et pouvoir piocher au hasard
     userPreferencesChallenge = [] // Reset la variable
+    userPreferencesChallengeIcon = [] // Reset la variable
+    userPreferencesTrophy = [] // Reset la variable
     for(let i = 0; i < userPreferences.length; i++) {
       for(let j = 0; j < dataListToChallenge.length; j++) {
         if(dataListToChallenge[j].includes($(userPreferences[i]).data('list'))) {
           for(let k = 0; k < dataListToChallenge[j][1].length; k++) {
             userPreferencesChallenge.push(dataListToChallenge[j][1][k])
+            userPreferencesChallengeIcon.push(dataIconList[j]) // Ajoute dans le même ordre que les missions, l'icone correspondante
+            userPreferencesTrophy.push(dataTrophy[j][k]) // Ajoute dans le même ordre que les missions, l'icone correspondante
           }
         }
       }
@@ -88,35 +151,52 @@ const generatePlanning = () => {
 
     // Permet de prendre au hasard dans le tableau en vérifiant les doublons
     userPlanning = [] // Reset la variable
+    userPlanningIcon = [] // Reset la variable
+    userTrophy = [] // Reset la variable
     while(userPlanning.length < durationPlanning) {
-      let randomChallenge = userPreferencesChallenge[getRandom(0, userPreferencesChallenge.length-1)]
+      let random = getRandom(0, userPreferencesChallenge.length-1)
+      let randomChallenge = userPreferencesChallenge[random]
+      let randomChallengeIcon = userPreferencesChallengeIcon[random]
+      let randomTrophy = userPreferencesTrophy[random]
       if(!userPlanning.includes(randomChallenge)) {
         userPlanning.push(randomChallenge)
+        userPlanningIcon.push(randomChallengeIcon)
+        userTrophy.push(randomTrophy)
       }
     }
+    
     // Garde en mémoire le planning
     localStorage.setItem("planning", JSON.stringify(userPlanning))
+    localStorage.setItem("icon", JSON.stringify(userPlanningIcon))
+    localStorage.setItem("trophy", JSON.stringify(userTrophy))
 
     // Crée un tableau avec les 14 jours à partir d'aujourd'hui pour garder en mémoire le début du planning
     userPlanningDays = [] // Reset la variable
+    userTrophyLocked = [] // Reset la variable
     const actualDay = new Date()
     const nextDay = new Date(actualDay)
     for(let i = 0; i < userPlanning.length; i++) {
       nextDay.setDate(actualDay.getDate() + i)
       userPlanningDays.push([nextDay.getDay(), nextDay.getDate()])
+      userTrophyLocked.push('locked')
     }
     // Garde en mémoire les jours
     localStorage.setItem("days", JSON.stringify(userPlanningDays))
+    localStorage.setItem("locked", JSON.stringify(userTrophyLocked))
 
-    $('.loading-planning').fadeOut()
+    //$('.loading-planning').fadeOut()
 
     // Affiche le planning
     displayPlanning()
+
+    // Affiche les trophées
+    displayTrophy()
   }
 }
 
 // Fonction pour afficher le planning générer aléatoirement
 const displayPlanning = () => {
+  $('.hidePlanningAndTrophy').show()
   // Affiche l'ancien agenda si on en génère un nouveau
   $('.agenda').children("li").remove()
   const today = new Date()
@@ -136,6 +216,44 @@ const displayPlanning = () => {
   })
 }
 
+// Fonction pour changer le texte du challenge
+const displayChallenge = () => {
+  const days = $('.day_number')
+  const day = $('.day_number.active')
+  const indexOfChallenge = days.index(day[0])
+  
+  textChallenge.html(userPlanning[indexOfChallenge])
+  iconChallenge.attr("src", `assets/images/${userPlanningIcon[indexOfChallenge]}`)
+
+  displayCitation()
+}
+
+// Fonction pour changer la citation
+const displayCitation = () => {
+  let newCitation = citation[getRandom(0, citation.length-1)]
+  textCitation.html(`"${newCitation}"`)
+}
+
+// Fonction pour afficher les trophées
+const displayTrophy = () => {
+  $('.trophy.boxes .box').remove()
+  for(let i = 0; i < userTrophy.length; i++) {
+    trophy.append(`<div class="box ${userTrophyLocked[i]}"><div class="box-inner"><h3>${userTrophy[i]}</h3><img class="trophy_icone" src="assets/images/${userPlanningIcon[i]}" /></div><div class="trophy_status_parent"><img class="trophy_status" src="/assets/images/trophy_locked.svg" /></div></div>`)
+  }
+}
+
+// Fonction pour finir les trophées
+const finishMission = () => {
+  const days = $('.day_number')
+  const day = $('.day_number.active')
+  const indexOfChallenge = days.index(day[0])
+  
+  userTrophyLocked[indexOfChallenge] = "unlocked"
+  localStorage.setItem("locked", JSON.stringify(userTrophyLocked))
+
+  displayTrophy()
+}
+
 // Fonction pour avoir un nombre aléatoire dans un intervalle fermé
 const getRandom = (min, max) => {
   min = Math.ceil(min)
@@ -146,44 +264,17 @@ const getRandom = (min, max) => {
 // Fonction pour charger le planning de l'utilisateur si il l'a déjà généré
 $(document).ready(function() {
   const userPlanningLoaded = JSON.parse(localStorage.getItem("planning"))
+  const userPlanningIconLoaded = JSON.parse(localStorage.getItem("icon"))
   const userPlanningDaysLoaded = JSON.parse(localStorage.getItem("days"))
-  if(userPlanningLoaded && userPlanningDaysLoaded) {
+  const userTrophyLoaded = JSON.parse(localStorage.getItem("trophy"))
+  const userTrophyLockedLoaded = JSON.parse(localStorage.getItem("locked"))
+  if(userPlanningLoaded && userPlanningDaysLoaded && userPlanningIconLoaded && userTrophyLoaded && userTrophyLockedLoaded) {
     userPlanning = userPlanningLoaded
     userPlanningDays = userPlanningDaysLoaded
+    userPlanningIcon = userPlanningIconLoaded
+    userTrophy = userTrophyLoaded
+    userTrophyLocked = userTrophyLockedLoaded
     displayPlanning()
+    displayTrophy()
   }
-})
-
-// Permet de cliquer sur les flèches du planning
-$('.arrow').click(function() {
-  const agenda = $('.agenda li')
-  if($(this).data('direction') == 'left') {
-    slideMove += amount
-  } else if($(this).data('direction') == 'right') {
-    slideMove -= amount
-  }
-  agenda.css('transform', `translateX(${slideMove}px)`)
-  
-  // Met à jour le slider en même temps
-  $('#myRange').val(-slideMove/amount)
-})
-
-// Fonction pour changer le texte du challenge
-const displayChallenge = () => {
-  const days = $('.day_number')
-  const day = $('.day_number.active')
-  const indexOfChallenge = days.index(day[0])
-  
-  textChallenge.html(userPlanning[indexOfChallenge])
-}
-
-// Fonction pour changer écouter les changements du slider
-$(document).on('input', '#myRange', function() {
-  const value = $(this).val()
-  const agenda = $('.agenda li')
-
-  // Pour garder la cohérence si on utilise les flèches après
-  slideMove = amount * value
-  agenda.css('transform', `translateX(-${slideMove}px)`)
-  slideMove = -slideMove
 })

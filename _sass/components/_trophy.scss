@@ -87,6 +87,10 @@
         &.unlocked{
             background: #467088;
             border: 4px solid #FCD34D;
+
+            .trophy_status {
+                display: none;
+            }
         }
 
         .box-inner{

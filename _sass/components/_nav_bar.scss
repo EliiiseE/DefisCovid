@@ -1,53 +1,4 @@
-// .position{
-//     place-content: end;
-// }
-
-
-// #nav {
-//     margin: 0 auto;
-//     width: 100vw;
-//     top: 0px;
-//     position: fixed ;
-    
-// }
-
-// nav ul{
-//     list-style-type: none;
-    
-// }
-
-// nav li{
-//     float: right;
-//     // width: 20%;
-//     text-align: center;
-// }
-
-// nav a{
-//     display: block;
-// }
-
-// nav ul::after{
-//     content: "";
-//     display: table;
-//     clear: both;
-// }
-
-// .liennav {
-//     color:$dark-orange;
-//     text-decoration: none;
-//     font-family: $font-montserrat;
-//     font-weight: $weight-medium;
-//     font-size: 36px;
-//     padding: 15px 15px 15px 15px;
-// }
-
-// .liennav:hover {
-//     background-color:$dark-orange;
-//     color: white;
-//     border: 2px solid $yellow-hover;
-// }
-
-@media (max-width: 600px) {
+/*@media (max-width: 600px) {
     nav{position: fixed ;
     bottom : 0;
     background-color: rgba($beige, 1);
@@ -113,4 +64,105 @@
     align-items: center;
    }
 
+}*/
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 85px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: $beige;
+    border: 1px solid $grey;
+
+    .logo {
+        width: 30%;
+    }
+
+    .navlink {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 65%;
+        padding: 0;
+
+        li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            a {
+                color: $dark-orange;
+                font-size: 30px;
+                font-family: $font-montserrat;
+                font-weight: $weight-medium;
+                text-decoration: none;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .image {
+                    width: 50px;
+                    height: 50px;
+                    margin-right: 15px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1090px) {
+    .nav {
+
+        .navlink {
+         width: 50%;
+
+            li {
+                a {
+                    flex-direction: column;
+                    font-size: 20px;
+                    font-family: $font-roboto;
+                    font-weight: $weight-regular;
+        
+                    .image {
+                        width: 30px;
+                        height: 30px;
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+@media (max-width: 760px) {
+    .nav {
+        top: auto;
+        bottom: 0;
+        height: 60px;
+
+        .logo {
+            display: none;
+        }
+
+        .navlink {
+         width: 100%;
+
+            li {
+                a {
+                    font-size: 15px;
+        
+                    .image {
+                        width: 25px;
+                        height: 25px;
+                    }
+                }
+            }
+        }
+
+    }
 }

@@ -5,6 +5,12 @@
     justify-content: stretch;
     flex-wrap: wrap;
     margin-bottom: 3rem;
+    margin-top: 85px;
+    position: relative;
+
+    @media (max-width: 760px) {
+        margin-top: 0;
+    }
 
     .title {
         font-family: $font-roboto;

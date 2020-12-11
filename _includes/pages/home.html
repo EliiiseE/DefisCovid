@@ -1,14 +1,17 @@
 {% include components/cookie.html %}
 
-<main class="main" >  
+<main class="main" id="main">  
     {% include components/accueil.html %}    
-    {% include components/preference.html %}    
-    {% include components/planning.html %}    
-    {% include components/trophy.html %}    
-    {% include components/form.html %}    
+    {% include components/preference.html %} 
+    <div class="hidePlanningAndTrophy" style="display: none;">
+        {% include components/planning.html %}    
+        {% include components/trophy.html %}   
+        {% include components/form.html %}    
+    </div>    
     {% include components/footer.html %}  
-    {% include components/nav_bar.html %}   
-    {% include components/nav_defaut.html %} 
+    {% include components/nav_bar.html %}
 </main>
+
 <script src="/assets/js/script.js"></script>
+<script src="/assets/js/slider.js"></script>
 <script src="/assets/js/cookies.js"></script>
