@@ -1,23 +1,23 @@
 // Liste des défis - 14 minimum pour tenir une semaine si on choisit qu'une préférence
-const tvChallenge = ['Regarder la saga <span>Ghost busters</span>', 'Regarder la saga <span>Jurassic Park </span>', 'Regarder la saga <span>Indiana Jones</span>', 
-'Regarder la saga <span>Pirates des Caraibes</span>', 'Regarder en une journée les<span> Star Wars </span>', 'Regarder le matin un <span> Télé Achats</span>',
+const tvChallenge = ['Regarder la saga <span>Ghost Busters</span>', 'Regarder la saga <span>Jurassic Park </span>', 'Regarder la saga <span>Indiana Jones</span>', 
+'Regarder la saga <span>Pirates des Caraïbes</span>', 'Regarder en une journée les<span> Star Wars </span>', 'Regarder le matin un <span> Télé Achats</span>',
  'Regarder la série <span>Friends</span>', 'Regarder toutes la saga <span> Harry Potter </span>', 'Regarder la série <span>Prison Break</span>', 'Regarder tous les <span>Avengers</span>', 
-'Passer la journée à regarder des <span> reportages arte</span>', 'Regarder la série des <span>Simpson</span> depuis la S01E01', 'Regarder la série <span>Super- natural</span>', 'Regarder des <span>films de Noël</span> ']
+'Passer la journée à regarder des <span> reportages ARTE</span>', 'Regarder la série des <span>Simpson</span> depuis la S01E01', 'Regarder la série <span>Supernatural</span>', 'Regarder des <span>films de Noël</span> ']
 
-const mobileChallenge = ['Faire du <span>shopping</span> sur vinted', 'Gagner à <span>2048</span>', 'Jouer à <span>Codifit Gruikui</span>',
+const mobileChallenge = ['Faire du <span>shopping</span> sur Vinted', 'Gagner à <span>2048</span>', 'Jouer à <span>Codifit Gruikui</span>',
  'Terminer 250 niveaux à <span>Candy Crush</span> Saga', 'Jouer à <span> Simcity</span>', 'Jouer à <span> Tetris</span>', 'Jouer à <span> Snake</span>', 'Monter légende sur <span> Hearth-Stone</span>', 
- 'Faire du yoga via l\'apps <span>Petit Bambou</span>', 'Télécharger un <span>Apps</span> au hasard et y jouer', 'Trier ton <span>téléphone</span>', 'Faire un <span>soduku</span> sur mobile', 'Jouer au <span>scrabble</span> sur mobile', 'Jouer en ligne au <span>monopoly</span> sur mobile']
+ 'Faire du yoga via l\'app <span>Petit Bambou</span>', 'Télécharger une <span>App</span> au hasard et y jouer', 'Faire du tri sur ton <span>téléphone</span>', 'Faire un <span>sudoku</span> sur mobile', 'Jouer au <span>scrabble</span> sur mobile', 'Jouer en ligne au <span>monopoly</span> sur mobile']
 
 const extraordinaryChallenge = ['Faire un <span>collier de pâtes</span>', 'Faire la momie avec du<span> papier toilette</span>', 'Ranger tous les <span>livres</span> par ordre alphabétique', 'Trier toutes tes <span>photos</span>', 
 'Ecrire un <span>poème</span>', 'Mets toi sur ton <span>31</span>', '<span>Trier</span> tes papiers importants', 
-'Faire un trie dans tes <span>vêtements</span>', 'Réorganiser <span>la décoration</span>', 'Dessiner <span>la vue</span> de sa fenêtre', 'Faire de la <span>pâte à sel</span>', 'Lire un livre <span>jamais lu</span>', 'Regarder et faire un <span>DYE</span>', '<span>Espionner</span> ce que fait ton entourage']
+'Faire un tri dans tes <span>vêtements</span>', 'Réorganiser <span>la décoration</span>', 'Dessiner <span>la vue</span> de ta fenêtre', 'Faire de la <span>pâte à sel</span>', 'Lire un livre <span>jamais lu</span>', 'Regarder et faire un <span>DYE</span>', '<span>Espionner</span> ce que fait ton entourage']
 
 const travelChallenge = ['Ecrire un <span>Haïku</span>', 'Programmer tes <span>futur voyages</span>', 'Apprendre une nouvelle <span> langue</span>', 'Apprendre à chanter du <span>Yodel</span>', 'Apprendre les <span>capitales de 15 pays</span>', 'Ecouter de la musique<span> celtique</span>', 
 'Ecouter de la musique <span>relaxante</span>', 'Apprendre <span>5 caractères chinois</span>', 'Ecouter le groupe <span>The Hu</span>',
- 'Faire le tour du monde sur <span>Google Map</span> ', 'Ecouter de la <span>Kpop</span>', 'Ecouter de la <span>Jpop</span> ', 'Apprenez à dire <span>"Bière!"</span> en 5 langues', 'Planifier son <span>tour du monde</span>']
+ 'Faire le tour du monde sur <span>Google Maps</span> ', 'Ecouter de la <span>Kpop</span>', 'Ecouter de la <span>Jpop</span> ', 'Apprenez à dire <span>"Bière!"</span> en 5 langues', 'Planifier son <span>tour du monde</span>']
 
 const cookChallenge = ['Faire un <span>Gâteau Géant</span>', 'Faire des <span>crêpes salées</span>', 'Faire la cuisine avec que des <span>ingrédients verts</span>', 'Préparer une <span>ratatouille</span>', 'Faire un <span>burger végétarien</span>', 'Faire des lasagnes<span> Veggie</span> ', 
-'Faire un <span>rainbow cake</span>', 'Cuisiner uniquement des <span>aliments crus</span> ', 'Faire un gâteau <span>sans oeufs</span>', 'Manger <span>Vegan</span>', 'Manger des<span> bonbons</span> toutes la journée', ' Faire une <span>mousse au chocolat</span>', 'Manger que des aliments commençant par la lettre <span>C</span>', 'Faire des <span>cookies</span>']
+'Faire un <span>Rainbow Cake</span>', 'Cuisiner uniquement des <span>aliments crus</span> ', 'Faire un gâteau <span>sans oeufs</span>', 'Manger <span>Vegan</span>', 'Manger des<span> bonbons</span> toutes la journée', ' Faire une <span>mousse au chocolat</span>', 'Manger que des aliments commençant par la lettre <span>C</span>', 'Faire des <span>cookies</span>']
 
 // Liste pour mettre en relation les data-list et les défis - plus simple pour la suite
 const dataListToChallenge = [
@@ -46,15 +46,15 @@ const tvTrophy = ['Chasseur de<br />Fantômes', 'Créateur de<br />Dinosaures', 
 
 const mobileTrophy = ['Acheteur<br />Compulsif', 'Fin stratège', 'Dresseur<br />Pokémon',
  'Fou à lier', 'Architecte<br />Diplômé', 'Maître des<br />Formes', 'Glouton', 'Le deck<br />Ultime', 
- 'Souplesse<br />Incarnée', 'Joueur du<br />Dimanche', 'TNettoyage', ' Neurones<br />d\'acier', 'Prof de<br />Français', 'Rue de la <br />paix']
+ 'Souplesse<br />Incarnée', 'Joueur du<br />Dimanche', 'Nettoyage', ' Neurones<br />d\'acier', 'Prof de<br />Français', 'Rue de la <br />Paix']
 
 const extraordinaryTrophy = ['Beauté<br />Commestible', 'Cosplay<br />Low Cost', 'Maniaque du<br />Rangement', ' Souvenirs<br />Ordonnés', 
 'Maître de la<br />Plume', 'Avoir la<br />Classe', 'Rigoureux', 
 'Vêtements<br />Oubliés', 'Décorateur de<br />Talent', 'Coup de<br />Crayon', 'Pâtissier', 'Ouverture<br />D\'esprit', 'Bob le<br />Bricoleur', 'Agent<br />Secret']
 
-const travelTrophy = ['Poète dans<br />Lâme', 'Guide<br />Touristique', 'Polyglote<br />Débutant', 'Voix divine', 'Géographe', 'Viking', 
-'Paix<br />Intérieure', 'Caligraphe', 'The Hu fan',
- 'Explorateur', 'Korean style', 'Japanese style ', 'Alcoolique<br />Cultivé', ' Meilleur que<br />Christophe<br />Colomb']
+const travelTrophy = ['Poète dans<br />L\'âme', 'Guide<br />Touristique', 'Polyglote<br />Débutant', 'Voix divine', 'Géographe', 'Viking', 
+'Paix<br />Intérieure', 'Caligraphe', 'Adepte du<br />Khöömii',
+ 'Explorateur', 'Korean Style', 'Japanese Style ', 'Alcoolique<br />Cultivé', ' Meilleur que<br />Christophe<br />Colomb']
 
 const cookTrophy = ['Master Cake', 'Sang Breton', 'Goût de la<br />Nature', 'Rat aux<br />Commandes', 'Presque un<br />Vrai steak', 'Garfield Vegan', 
 'Mille couleurs<br />En sucre', 'Avant la<br />Découverte<br />Du feu ', 'Pâtissier<br />Sous pression', 'Vegganisme', 'Diabète', 'Fort en<br />Chocolat', 'C bon', 'Cuisine de<br />Mamie']
