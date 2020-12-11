@@ -292,10 +292,11 @@
   }
 
   .citation{
-    font-size: 24px;
+    font-size: 18px;
     font-family: $font-montserrat;
     font-weight: $weight-regular;
     text-align: center;
+    margin: 20px;
   }
 
   .agenda-container * {
@@ -401,7 +402,7 @@
       }
     }
     .citation{
-      font-size: 30px;
+      font-size: 26px;
     }
     
     .agenda {
@@ -469,9 +470,6 @@
     }
   }
 
-  .citation{
-    font-size: 40px;
-  }
   
   .agenda {
     width: 639px;
