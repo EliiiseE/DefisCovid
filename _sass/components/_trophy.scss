@@ -20,35 +20,39 @@
 }
 .trophy_head {
   h2 {
-    font-family: Montserrat;
+    font-family: $font-roboto;
     font-style: normal;
     font-weight: bold;
-    font-size: 64px;
-    line-height: 78px;
-
+    font-size: 3rem;
+    // line-height: 78px;
+    margin-block-end: 1rem;
+    margin-block-start: 4rem;
     text-align: center;
 
     color: #191847;
 
     @media (max-width: 600px) {
       font-size: 32px;
-      margin-bottom: 0;
+      margin-bottom: 2rem;
     }
   }
   p {
     font-family: Montserrat;
     font-style: normal;
-    font-weight: 500;
-    font-size: 35px;
-    line-height: 43px;
+    font-weight: 400;
+    font-size: 1.5rem;
+    // line-height: 43px;
 
-    max-width: 90vw;
+    max-width: 60vw;
     margin-right: auto;
     margin-left: auto;
-
+    margin-block-end: 3rem;
+    margin-block-start: 0;
     color: #191847;
+    text-align: center;
 
     @media (max-width: 600px) {
+        max-width: 80vw;
       margin-top: 0;
       font-size: 20px;
     }
