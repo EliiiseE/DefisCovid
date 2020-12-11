@@ -25,13 +25,11 @@ html, body {
 }
 
 html {
+    overflow-x: hidden;
     scroll-behavior: smooth;
 }
 
 body {
     background-color: $beige;
-    overflow-x: hidden;
-}
-.overflow{
     overflow-x: hidden;
 }

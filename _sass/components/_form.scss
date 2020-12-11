@@ -12,6 +12,7 @@
   flex-direction: column;
   background-color: $yellow;
   position: relative;
+  padding-top:1rem ;;
 }
 .bulb {
   height: 3.5rem;
@@ -102,13 +103,17 @@ label {
 .svg_form_mobile {
   position: absolute;
   z-index: -1;
-  top: 45px;
+  top: 4rem;
   width: 100vw;
 }
 .svg_form_desktop {
   position: absolute;
   width: 0vw;
   bottom: -3rem;
+}
+.flex_button {
+  display: flex;
+  justify-content: center;
 }
 
 @media screen and (min-width: 600px) {
@@ -154,10 +159,7 @@ label {
     top: 0.9rem;
     font-size: 30px;
   }
-  .flex_button {
-    display: flex;
-    justify-content: center;
-  }
+
   .group {
     margin: 24px 64px 24px 64px;
   }

@@ -1,210 +1,232 @@
-.presentation{
-    width: 100vw;
+.wave_accueil {
+  position: absolute;
+  z-index: -1;
+  top: -50px;
+}
+.wave_accueil_desktop {
+  position: absolute;
+  z-index: -1;
+  width: 0;
+  top: 0;
+}
+.presentation {
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: stretch;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+  margin-top: 85px;
+
+  @media (max-width: 760px) {
+    margin-top: 0;
+  }
+
+  .title {
+    font-family: $font-roboto;
+    width: 100%;
+    padding: 0 34px;
+
+    h1 {
+      font-weight: $weight-bold;
+      color: $black;
+      font-size: 32px;
+      margin: 0;
+    }
+
+    h2 {
+      font-weight: $weight-regular;
+      color: $black;
+      font-size: 32px;
+      margin: 0;
+    }
+  }
+
+  .girl {
+    width: 50%;
+
+    img {
+      object-fit: contain;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .txt1 {
+    width: 50%;
+    font-family: $font-montserrat;
+    font-size: 18px;
+    color: $black;
+    span {
+      font-weight: $weight-bold;
+    }
+  }
+
+  .txt2 {
+    width: 100%;
+    font-family: $font-montserrat;
+    font-size: 18px;
+    padding: 0 10px;
+    color: $black;
+    span {
+      font-weight: $weight-bold;
+    }
+  }
+}
+.icone_accueil {
+  position: absolute;
+  z-index: -1;
+  width: 30vw;
+  height: 20vw;
+  margin-top: 9vw;
+}
+.logos {
+  flex-direction: column;
+  display: flex;
+  width: 100vw;
+  .icon {
+    position: static;
     display: flex;
-    flex-direction: row;
-    justify-content: stretch;
-    flex-wrap: wrap;
-    margin-bottom: 3rem;
-    margin-top: 85px;
-    position: relative;
+    flex-direction: column;
+    align-items: center;
 
-    @media (max-width: 760px) {
-        margin-top: 0;
+    img {
+      width: 25%;
+      display: block;
     }
 
-    .title {
-        font-family: $font-roboto;
-        width: 100%;
-        padding: 0 34px;
-
-        h1{
-            font-weight: $weight-bold;
-            color: $black;
-            font-size: 32px;
-            margin: 0;
-        }
-
-        h2{
-            font-weight: $weight-regular;
-            color: $black;
-            font-size: 32px;
-            margin: 0;
-        }
+    h3 {
+      font-weight: $weight-regular;
+      font-family: $font-montserrat;
+      color: $black;
+      font-size: 24px;
+      // margin-top: -50px;
     }
-
-    .girl{
-        width: 50%;
-        
-
-        img{
-            object-fit: contain;
-            width: 100%;
-            height: 100%;
-        }
-    }
-
-    .txt1{
-        width: 50%;
-        font-family: $font-montserrat;
-        font-size: 18px;
-        color: $black;
-        span{
-            font-weight: $weight-bold; 
-        }
-    }
-
-    .txt2{
-        width: 100%;
-        font-family: $font-montserrat;
-        font-size: 18px;
-        padding: 0 10px;
-        color: $black;
-        span{
-            font-weight: $weight-bold; 
-        }
-    }
+  }
 }
 
-.logos {
+// .logos {
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     width: 80%;
+//     margin: auto;
+//     .image {
+//     position: relative;
+//     width: 300px;
+//     height: 300px;
+//     margin: auto;
+//         span{
+//             content: "";
+//             position: absolute;
+//             top: 50%;
+//             left: 50%;
+//             transform: translate(-35%, -20%);
+//             background: rgba(252, 211, 77, 0.52);
+//             clip-path: url("#clipIcon");
+//             width: 100%;
+//             height: 100%;
+//             z-index: -1;
+//         }
+//     }
+
+//     .fun {
+//       background: url('../../assets/images/confetti.png') no-repeat center;
+//       background-size: 101px 110px;
+//     }
+
+//     .mission {
+//         background: url('../../assets/images/mission.png') no-repeat center;
+//         background-size: 101px 110px;
+//       }
+
+//     .fusee {
+//     background: url('../../assets/images/rocket.png') no-repeat center;
+//         background-size: 101px 110px;
+//     }
+// }
+
+@media screen and (min-width: 1094px) {
+  .icone_accueil {
+    margin-top: 3vw;
+    width: 30vw;
+    height: 10vw;
+  }
+  .wave_accueil {
+    width: 0;
+  }
+  .wave_accueil_desktop {
+    width: 100vw;
+  }
+  .presentation {
     flex-direction: column;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    padding: 0;
+    position: relative;
+    margin-bottom: 10rem;
+    .title {
+      font-size: 50px;
+      width: 50%;
+      padding-right: 2vw;
+
+      h1 {
+        font-weight: bold;
+        color: $black;
+        font-size: 50px;
+        margin: 0;
+      }
+
+      h2 {
+        color: $black;
+        font-size: 50px;
+        margin: 0;
+      }
+    }
+
+    .girl {
+      width: 50%;
+      order: -1;
+      align-self: flex-start;
+      position: absolute;
+      height: 100%;
+      left: 0;
+      top: 0;
+      img {
+        object-fit: contain;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .txt1 {
+      width: 50%;
+      font-family: $font-montserrat;
+      font-size: 40px;
+      padding-right: 2vw;
+    }
+
+    .txt2 {
+      width: 50%;
+      font-family: $font-montserrat;
+      font-size: 40px;
+      padding-right: 2vw;
+    }
+  }
+
+  .logos {
+    flex-direction: row;
     display: flex;
     width: 100%;
 
-    .icon{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-        img {
-            width: 25%;
-            display: block;
-        }
-
-        h3 {
-            font-weight: $weight-regular;
-            font-family: $font-montserrat;
-            color: $black;
-            font-size: 24px;
-            margin-top: -50px;
-        }
-    }
-}
-
-
-.logos {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 80%;
-    margin: auto;
-    .image {
-    position: relative;
-    width: 300px;
-    height: 300px;
-    margin: auto;
-        span{
-            content: "";
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-35%, -20%);
-            background: rgba(252, 211, 77, 0.52);
-            clip-path: url("#clipIcon");
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-        }
-    }
-
-    .fun {
-      background: url('../../assets/images/confetti.png') no-repeat center;
-      background-size: 101px 110px;
-    }
-
-    .mission {
-        background: url('../../assets/images/mission.png') no-repeat center;
-        background-size: 101px 110px;
+    .icon {
+      img {
+        width: 35%;
       }
 
-    .fusee {
-    background: url('../../assets/images/rocket.png') no-repeat center;
-        background-size: 101px 110px;
+      h3 {
+        font-size: 36px;
+      }
     }
+  }
 }
-
-
-@media screen and (min-width: 1094px) {
-    .presentation{
-        flex-direction: column;
-        align-items: flex-end;
-        flex-wrap: wrap;
-        padding: 0;
-        position: relative;
-        .title {
-            font-size: 50px;
-            width: 50%;
-            padding: 0px;
-    
-            h1{
-                font-weight: bold;
-                color: $black;
-                font-size: 50px;
-                margin: 0;
-            }
-
-            h2{
-                color: $black;
-                font-size: 50px;
-                margin: 0;
-            }
-        }
-    
-        .girl{
-            width: 50%;
-            order: -1;
-            align-self: flex-start;
-            position: absolute;
-            height: 100%;
-            left: 0;
-            top: 0;
-            img{
-                object-fit: contain;
-                width: 100%;
-                height: 100%;
-            }
-        }
-    
-        .txt1{
-            width: 50%;
-            font-family: $font-montserrat;
-            font-size: 40px;
-        }
-    
-        .txt2{
-            width: 50%;
-            font-family: $font-montserrat;
-            font-size: 40px;
-            padding: 0px;
-        }
-    }
-
-    .logos {
-        flex-direction: row;
-        display: flex;
-        width: 100%;
-
-        .icon{
-            img {
-                width: 35%;
-            }
-
-            h3{
-                font-size: 36px;
-            }
-    
-        }
-    
-    }
-}
-
-
